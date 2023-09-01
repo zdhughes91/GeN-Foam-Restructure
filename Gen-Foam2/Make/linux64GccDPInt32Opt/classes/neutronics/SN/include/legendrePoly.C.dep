@@ -1,0 +1,4 @@
+$(OBJECTS_DIR)/classes/neutronics/SN/include/legendrePoly.C.dep: \
+classes/neutronics/SN/include/legendrePoly.C \
+
+#END

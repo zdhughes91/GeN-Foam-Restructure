@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# --- Run from this directory
+cd ${0%/*} || exit 1
+
+# --- Initialize the output file
+resFile=test.out
+rm $resFile
+touch $resFile
+
+# --- Run the simulation
+echo -e "Run tutorial Godiva_SN ...\n" | tee -a $resFile
+# foamDictionary system/controlDict -entry endTime -set 3
+# foamDictionary system/controlDict -entry writeInterval -set 3
+./Allrun_parallel >> log.simulation
+echo -e "Done running tutorial Godiva_SN ...\n" | tee -a $resFile
+
+# --- Check it ran
+endString=$(tail -3 ./log.GeN-Foam | grep End)
+if [ "$endString" = "End" ]; then
+    echo -e "Godiva_SN has converged \n" | tee -a $resFile
+else
+    echo -e "Godiva_SN has NOT converged \n" | tee -a $resFile
+    exit 1
+fi
+
+# --- Recover the results
+isInRange()
+{
+    ref=$1
+    value=$2
+    error=$3
+    valueMin=$(bc -l <<<"$value*(1-$error)")
+    valueMax=$(bc -l <<<"$value*(1+$error)")
+    if (( $(echo "$valueMin <= $ref && $ref <= $valueMax" | bc -l) )); then
+        echo 0
+    elif (( $(echo "$valueMax <= $ref && $ref <= $valueMin" | bc -l) )); then
+        echo 0
+    else
+        echo 1
+    fi
+}
+
+keff=$(foamDictionary ./3/uniform/reactorState -entry keff -value)
+expectedAt=0.971135
+
+# --- Check that results are correct
+error=0.001
+echo "keff with $error relative error" | tee -a $resFile
+if [ $(isInRange $expectedAt $keff $error) -eq 0 ]; then
+    echo "Perfect match:" | tee -a $resFile
+    echo "    Expected  : $expectedAt" | tee -a $resFile
+    echo "    Simulated : $keff" | tee -a $resFile
+else
+    echo "Divergent results:" | tee -a $resFile
+    echo "    Expected  : $expectedAt" | tee -a $resFile
+    echo "    Simulated : $keff" | tee -a $resFile
+    exit 1
+fi
+
+# --- Exit successfully
+exit 0

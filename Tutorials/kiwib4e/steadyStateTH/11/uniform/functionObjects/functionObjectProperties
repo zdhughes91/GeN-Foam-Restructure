@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "11/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    mFlowInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_massFlow 0.01174689112756944;
+        }
+    }
+    mFlowInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_massFlow 0.09996907962079332;
+        }
+    }
+    mFlowOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_massFlow 0.01159111427850136;
+        }
+    }
+    mFlowOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_massFlow 0.09462834031897124;
+        }
+    }
+    vInletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(inletCentralUnloaded,magU) 15;
+            areaAverage(inletCentralUnloaded,p) 3454390.254641576;
+            areaAverage(inletCentralUnloaded,T) 83.3;
+            areaAverage(inletCentralUnloaded,alphaRhoPhi) -0.005873445563784723;
+            areaAverage(inletCentralUnloaded,alphaPhi) -0.0005401344762306966;
+        }
+    }
+    vOutletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(outletCentralUnloaded,magU) 14.82974761983716;
+            areaAverage(outletCentralUnloaded,p) 3447280;
+            areaAverage(outletCentralUnloaded,T) 83.2876819067144;
+            areaAverage(outletCentralUnloaded,alphaRhoPhi) 0.00579555713925068;
+            areaAverage(outletCentralUnloaded,alphaPhi) 0.0005340209015305023;
+        }
+    }
+    vInletFuelElement
+    {
+        scalar
+        {
+            areaAverage(inletFuelElement,magU) 15;
+            areaAverage(inletFuelElement,p) 3655589.20259536;
+            areaAverage(inletFuelElement,T) 83.29999999999998;
+            areaAverage(inletFuelElement,alphaRhoPhi) -0.008330756635068133;
+            areaAverage(inletFuelElement,alphaPhi) -0.0007220593978193345;
+        }
+    }
+    vOutletFuelElement
+    {
+        scalar
+        {
+            areaAverage(outletFuelElement,magU) 120.0218129747289;
+            areaAverage(outletFuelElement,p) 3447280.000000001;
+            areaAverage(outletFuelElement,T) 608.4830410730169;
+            areaAverage(outletFuelElement,alphaRhoPhi) 0.007885695023521992;
+            areaAverage(outletFuelElement,alphaPhi) 0.005787530072985997;
+        }
+    }
+    TInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_TBulk 83.3;
+        }
+    }
+    TInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_TBulk 83.3;
+        }
+    }
+    TOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_TBulk 83.2876819067144;
+        }
+    }
+    TOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_TBulk 608.4803186799458;
+        }
+    }
+    totalPowerNeutro
+    {
+        scalar
+        {
+            volIntegrate(neutroRegion,powerDensity) 3748000.557589655;
+        }
+    }
+    totalPowerAhdeltaT
+    {
+        scalar
+        {
+            volIntegrate(fluidRegion,hdeltaT) 894638.1862865761;
+        }
+    }
+}
+
+
+// ************************************************************************* //

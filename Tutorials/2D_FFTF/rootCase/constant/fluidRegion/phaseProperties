@@ -1,0 +1,499 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      phaseProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermalHydraulicsType           "onePhase";
+
+structureProperties
+{    
+    "outletPlenum:inletPlenum"
+    {
+        volumeFraction          0;
+        Dh                      6.2928;
+    }
+
+    "bypass"
+    {
+        volumeFraction          0.9955;
+        Dh                      6.2e-4;
+    }
+
+    "GEM"
+    {
+        volumeFraction          0.801048;
+        Dh                      1e-6;
+    }
+
+    "inletNozzle"
+    {
+        volumeFraction          0.5904344344;
+        Dh                      0.005;
+    }
+
+    "lowerShieldCR"
+    {
+        volumeFraction          0.95;
+        Dh                      0.0019;
+    }
+
+    "CR"
+    {
+        volumeFraction          0.62945;
+        Dh                      0.005112;
+    }
+
+    "lowerShieldInnerCore"
+    {
+        volumeFraction          0.867355;
+        Dh                      0.0112;//0.0098;
+        passiveProperties
+        {
+            volumetricArea  27.563;
+            rho             7700;
+            Cp              500;
+            T               574.56;
+        }
+    }
+
+    "lowerShieldOuterCore"
+    {
+        volumeFraction          0.867355;
+        Dh                      0.008;//0.0098;
+        passiveProperties
+        {
+            volumetricArea  27.563;
+            rho             7700;
+            Cp              500;
+            T               574.56;
+        }
+    }
+
+    "innerCore"
+    {
+        //- This volume fraction accounts for the pins AND wrapper wire
+        volumeFraction          0.5904344344;
+        Dh                      0.0031956386;
+        powerModel
+        {
+            //- This volume fraction accounts for the pins only
+            type                nuclearFuelPin;
+            volumeFraction      0.5539729557;
+            fuelMeshSize        10;
+            cladMeshSize        5;
+            fuelT               574.56;
+            cladT               574.56;
+            cladK               20;
+            fuelK               3;
+            cladRho             7870;
+            fuelRho             10480;
+            cladCp              500;
+            fuelCp              250;
+            cladOuterRadius     0.002921;
+            cladInnerRadius     0.002540;
+            fuelOuterRadius     0.002470;
+            fuelInnerRadius     0.0;
+            /*
+                Fresh fuel would be
+                (   0   300 )
+                (   795443280.75916 1800    )
+
+                At 25 GWd/tHM of burnup it would be
+                (   0   438.635147178   )
+                (   795443280.75916 2631.810883068  )
+
+                At 50 GWd/tHM of burnup would be
+                (   0   528.4782467867  )
+                (   795443280.75916 3170.8694807204 )
+
+                At 75 Gwd/tHM of burnup would be
+                (   0   571.5444760935  )
+                (   795443280.75916 3429.2668565608 )
+
+                At 100 GWd/tHM of burnup would be
+                (   0   589.2082740227  )
+                (   795443280.75916 3535.2496441365 )
+
+                These are obtained via the correlation by
+                J. Lavarenne, et al.
+                "A 2-D correlation to evaluate fuel-cladding gap thermal 
+                conductance in mixed oxide fuel elements for sodium-cooled 
+                fast reactors", Proceedings of Global/Top Fuel 2019, 22-27 
+                September 2019.
+
+                The actual correlation is 
+
+                gapH = 1e2*(3+Q)*(1+TANH(2e-2*B))
+
+                with gapH being the gap conductance in W/m2/K, Q the rod
+                linear power (kW/m) and B the burnup (GWd/tHM). The
+                coefficients differ between what is reported here and in the
+                paper due to the different dimensions of B and gapH.
+                To conversion between linear power and volumetric fuel power
+                density Q is
+
+                Q = 1000*LP/(pi*((fuelInnerRadius)^2-(fuelOuterRadius)^2))
+
+                with LP in kW/m and Q in W/m3. This is how this gapH tables
+                were computed. In particular, 795443280.75916 W/m3 corresponds
+                to 15 kW/m in this setup.
+            */
+            gapHPowerDensity    table
+            (
+                (   0               528.4782467867  )
+                (   795443280.75916 3170.8694807204 )
+            );
+        }
+        passiveProperties
+        {
+            //- This volume fraction accounts for the wire only
+            volumeFraction  0.0364614787;
+            volumetricArea  100.931;
+            rho             7700;
+            Cp              500;
+            T               574.56;
+        }
+    }
+
+    "outerCore"
+    {
+        volumeFraction          0.5904344344;
+        Dh                      0.0031956386;
+        powerModel
+        {
+            type                nuclearFuelPin;
+            volumeFraction      0.5539729557;
+            fuelMeshSize        10;
+            cladMeshSize        5;
+            fuelT               574.56;
+            cladT               574.56;
+            cladK               20;
+            fuelK               3;
+            cladRho             7870;
+            fuelRho             10480;
+            cladCp              500;
+            fuelCp              250;
+            cladOuterRadius     0.002921;
+            cladInnerRadius     0.002540;
+            fuelOuterRadius     0.002470;
+            fuelInnerRadius     0.0;
+            
+            //- See comments on the innerCore gapHTable
+            gapHPowerDensity    table
+            (
+                (   0               528.4782467867  )
+                (   795443280.75916 3170.8694807204 )
+            );
+        }
+        passiveProperties
+        {
+            volumeFraction  0.0364614787;
+            volumetricArea  100.931;
+            rho             7700;
+            Cp              500;
+            T               574.56;
+        }
+    }
+
+    "upperShieldCore"
+    {
+        volumeFraction          0.5904344344;
+        Dh                      0.0031956386;
+        
+        passiveProperties
+        {
+            volumetricArea  100.931;
+            rho             7700;
+            Cp              500;
+            T               574.56;
+        }
+    }
+
+    "lowerShieldReflector"
+    {
+        volumeFraction          0.971133;
+        Dh                      0.00017;
+    }
+
+    "reflector"
+    {
+        volumeFraction          0.927749;
+        Dh                      0.00314;
+    }
+
+    "upperShieldReflector"
+    {
+        volumeFraction          0.927749;
+        Dh                      0.0005;
+    }
+
+    "radialShield"
+    {
+        volumeFraction          0.9445;
+        Dh                      0.00023;
+    }
+
+    "hotLegPrimary"
+    {
+        volumeFraction          0;
+        Dh                      0.6922;
+    }
+
+    "pumpPrimary"
+    {
+        volumeFraction          0;
+        Dh                      0.0032;
+        momentumSource          (0 0 -166000);
+        momentumSourceTimeProfile
+        {
+            type                            table;
+
+            //- Time after which the time table is applied
+            startTime                       910;
+
+            //- Left column is time elapsed since the startTime defined
+            //  above
+            table       table
+            (
+                (   0   1   )
+                (   1   0.8490104619    )
+                (   2   0.7126676467    )
+                (   3   0.5704819773    )
+                (   4   0.4544049355    )
+                (   5   0.4067212859    )
+                (   6   0.3614721756    )
+                (   7   0.3121342655    )
+                (   8   0.2707292455    )
+                (   9   0.2348546401    )
+                (   10  0.2107585977    )
+                (   11  0.1882454195    )
+                (   12  0.1689061961    )
+                (   13  0.1496256504    )
+                (   14  0.1365460959    )
+                (   15  0.1246914496    )
+                (   16  0.1135116952    )
+                (   17  0.104758379     )
+                (   18  0.0957024858    )
+                (   19  0.0880116186    )
+                (   20  0.0794847554    )
+                (   21  0.0741107428    )
+                (   22  0.0687223901    )
+                (   23  0.0636870882    )
+                (   24  0.0588258126    )
+                (   25  0.0544194588    )
+                (   26  0.0519427255    )
+                (   27  0.0491475437    )
+                (   28  0.0462844558    )
+                (   29  0.0441071806    )
+                (   30  0.0413276367    )
+                (   31  0.0389975941    )
+                (   32  0.0367218999    )
+                (   33  0.0351145188    )
+                (   34  0.0333531052    )
+                (   35  0.0316403978    )
+                (   36  0.0299614054    )
+                (   37  0.0285915485    )
+                (   38  0.0270150171    )
+                (   39  0.025460465     )
+                (   40  0.0240653574    )
+                (   41  0.02271732      )
+                (   42  0.0212259878    )
+                (   43  0.020481928     )
+                (   44  0.0194214552    )
+                (   45  0.0186417375    )
+                (   46  0.0179087488    )
+                (   47  0.0170474673    )
+                (   48  0.0162736858    )
+                (   49  0.01553825      )
+                (   50  0.0148278948    )
+                (   51  0.0140418071    )
+                (   52  0.0132999524    )
+                (   53  0.012661329     )
+                (   54  0.0119988844    )
+                (   55  0.0115881536    )
+                (   56  0.0111121397    )
+                (   57  0.0104727997    )
+                (   58  0.0105997982    )
+                (   59  0.0096376694    )
+                (   60  0.0093107182    )
+                (   61  0.0088416608    )
+                (   62  0.0084639786    )
+                (   63  0.0080226863    )
+                (   64  0.0076319994    )
+                (   65  0.0074565812    )
+                (   66  0.0072036479    )
+                (   67  0.0070414241    )
+                (   68  0.0068513107    )
+                (   69  0.006596788     )
+                (   70  0.0063421591    )
+                (   71  0.0062014195    )
+                (   72  0.0061113938    )
+                (   73  0.0057993238    )
+                (   74  0.0055527619    )
+                (   75  0.0056349538    )
+                (   76  0.0052748107    )
+                (   77  0.0051410597    )
+                (   78  0.0050448372    )
+                (   79  0.0050675413    )
+                (   80  0.0046473088    )
+                (   81  0.0046393453    )
+                (   82  0.004553619     )
+                (   83  0.0044288036    )
+                (   84  0.0042716755    )
+                (   85  0.0041356382    )
+                (   86  0.003985839     )
+                (   87  0.0038724699    )
+                (   88  0.0037969543    )
+                (   89  0.0034596389    )
+                (   149 0.0021316203    )
+                (   1490 0.001    )
+            );
+        }
+    }
+
+    "IHXPrimary:IHXSecondary"
+    {
+        volumeFraction          0;
+        Dh                      0.00113;
+        //- Z tortuosity is to prevent back-diffusion of temperature from IHX 
+        //  into hotLeg at very low primary mass flows... even though, do I
+        //  really need this? Eh...
+        localTortuosity         (1 1 0.01389);
+    }
+
+    "coldLegPrimary:pipePumpIHXPrimary"
+    {
+        volumeFraction          0;
+        Dh                      0.3874;
+    }
+
+    "coldLegSecondary:pumpSecondary:pipePumpIHXSecondary:hotLegSecondary"
+    {
+        volumeFraction          0;
+        Dh                      0.3874;
+    }
+
+    heatExchangers
+    {
+        "IHX"
+        {
+            primary             "IHXPrimary";
+            secondary           "IHXSecondary";
+            volumetricArea      106.6673;
+            wallConductance     16736.4017;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------- //
+// --- REGIME MAP MODELS --------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+regimeMapModels
+{}
+
+// ------------------------------------------------------------------------- //
+// --- PHYSICS MODLS ------------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+physicsModels
+{
+    dragModels
+    {
+        "lowerShieldInnerCore:lowerShieldOuterCore:lowerShieldCR:bypass:outletPlenum:hotLegPrimary:pipePumpIHXPrimary:coldLegPrimary:inletPlenum:hotLegSecondary:coldLegSecondary:pipePumpIHXSecondary"
+        {
+            type    ReynoldsPower;
+            coeff   0.687;
+            exp     -0.25;
+        }
+
+        "GEM:reflector:lowerShieldReflector:upperShieldReflector:radialShield:pumpPrimary:IHXPrimary:inletNozzle:IHXSecondary:pumpSecondary"
+        {
+            type                Churchill;
+            surfaceRoughness    1e-6;
+        }
+
+        "innerCore:outerCore:upperShieldCore"
+        {   
+            "localZ"
+            {
+                type                Rehme;
+                numberOfPins        217;
+                pinDiameter         0.005842;
+                wireDiameter        0.001445;
+                wireLeadLen         0.302;
+                wetWrapPerimeter    0.38143;
+            }
+            "localX"
+            {
+                //- This is GunterShaw
+                type    ReynoldsPower;
+                coeff   0.96;
+                exp     -0.145;
+            }
+            //- In theory drag along the Y axis should not matter (as it is 
+            //  perpendicular to the wedge plane), but for consistency I set it
+            "localY"
+            {
+                //- This is GunterShaw
+                type    ReynoldsPower;
+                coeff   0.96;
+                exp     -0.145;
+            }
+        }
+
+        "CR"
+        {
+            type                Rehme;
+            numberOfPins        61;
+            pinDiameter         0.01204;
+            wireDiameter        0.00061;
+            wireLeadLen         0.4978;
+            wetWrapPerimeter    0.35334;
+        }
+        
+    }
+
+    heatTransferModels
+    {
+        "IHXPrimary:IHXSecondary"
+        {
+            type    NusseltReynoldsPrandtlPower;
+            const   10.342093604;
+            coeff   0.0413683744;
+            expRe   0.77;
+            expPr   0.77;
+        }
+
+        "lowerShieldInnerCore:lowerShieldOuterCore:innerCore:outerCore:upperShieldCore"
+        {
+            type    NusseltReynoldsPrandtlPower;
+            const   7.07842;
+            coeff   0.028314;
+            expRe   0.77;
+            expPr   0.77;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------- //
+// --- MISCELLANEA --------------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+pMin                    1e4;
+pRefCell                5;
+pRefValue               100000;
+
+// ************************************************************************* //

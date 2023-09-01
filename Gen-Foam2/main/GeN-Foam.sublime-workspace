@@ -1,0 +1,494 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Hco",
+				"Hcool"
+			],
+			[
+				"powerDe",
+				"powerDensityPtr"
+			],
+			[
+				"power",
+				"powerModels_"
+			],
+			[
+				"for",
+				"forAll"
+			],
+			[
+				"coup",
+				"coupling"
+			],
+			[
+				"TH_",
+				"THMesh_"
+			],
+			[
+				"pow",
+				"powerDensity_"
+			],
+			[
+				"global",
+				"globalOptions"
+			],
+			[
+				"po",
+				"powerUpdate"
+			],
+			[
+				"boro",
+				"boronReactivityPtr_"
+			],
+			[
+				"dm",
+				"dmdtW_"
+			],
+			[
+				"prec",
+				"precI"
+			],
+			[
+				"zero",
+				"zeroGradientFvPatchScalarField"
+			],
+			[
+				"Up",
+				"UPtr_"
+			],
+			[
+				"li",
+				"liquidFuel_"
+			],
+			[
+				"no",
+				"normalized"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/structure.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/regressionTest",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/transient/log.GeN-Foam",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/regressionResults",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/Allclean",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKinetics.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKineticsLiquidFuel.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/options",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/files",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/include/equations/EEqn_1p.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy/include/equations/EEqn_1pl.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/include/EEqns_2p.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/createCouplingFields.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/structure.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/powerModel.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/powerModel.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearFuelPin/nuclearFuelPin.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearFuelPin/nuclearFuelPin.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedPower/fixedPower.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedPower/fixedPower.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedTemperature/fixedTemperature.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedTemperature/fixedTemperature.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/lumpedNuclearStructure/lumpedNuclearStructure.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/README.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/lumpedNuclearStructure/lumpedNuclearStructure.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/thermalHydraulics.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Tutorials.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/system/controlDict",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/system/blockMeshDict",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/system/topoSetDict",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/constant/fluidRegion/thermophysicalProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/constant/fluidRegion/phaseProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/rootCase/constant/fluidRegion/phaseProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/constant/fluidRegion/turbulenceProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/rootCase/constant/fluidRegion/turbulenceProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/system/fluidRegion/fvSolution",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_thermalMSR_pointKinetics/steadyState/system/fluidRegion/fvSchemes",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/TODO",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_MSR_pointKinetics/steadyState/constant/fluidRegion/phaseProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/1D_MSR_pointKinetics/steadyState/log.GeN-Foam",
+		"/home/carlo/.cache/.fr-Mfm811/MSRE_diffusion/constant/fluidRegion/phaseProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/lumpedStructure/lumpedStructure.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/lumpedStructure/lumpedStructure.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearSteadyStatePebble/nuclearSteadyStatePebble.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearSteadyStatePebble/nuclearSteadyStatePebble.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/3D_SmallESFR/rootCase/constant/fluidRegion/polyMesh/boundary",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/constant/fluidRegion/polyMesh/boundary",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/constant/fluidRegion/phaseProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/p_rgh",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/p",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/U",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/k",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/epsilon",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/system/controlDict",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/system/fluidRegion/fvSchemes",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/system/fluidRegion/fvSolution",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/constant/fluidRegion/turbulenceProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/constant/fluidRegion/thermophysicalProperties",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/T",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/2D_onePhaseAndPointKineticsCoupling/rootCase/constant/fluidRegion/phaseProperties",
+		"/usr/lib/openfoam/openfoam2206/tutorials/incompressible/pisoFoam/laminar/porousBlockage/Allrun",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/nut",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR_GeN_FoaM/0/fluidRegion/alphat",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Tutorials/gFHR/system/controlDict",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearSteadyStatePebble/nuclearSteadyStatePebbleAverage.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearSteadyStatePebble/nuclearSteadyStatePebbleAverage.H",
+		"/home/carlo/Desktop/untitled",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/.gitlab-ci.yml",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/Doxygen/Doxyfile",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Compiling_GeN-Foam.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Coupling.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Important_notes.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Neutronics.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Post_processing.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Pre_processing.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Recent_changes.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/references.bib",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Running_GeN-Foam.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/thermoMechanics.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Tips_and_tricks.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/User_manual.md",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/solve.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/GeN-Foam.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/createFluidMesh.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/createMeshInterpolators.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/correctCouplingFields.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/createOutput.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include/writeOutput.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/thermalHydraulicsModel.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/thermalHydraulicsModel.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/fluid/fluid.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/fluid/fluid.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/onePhase.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/onePhase.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy/onePhaseLegacy.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy/onePhaseLegacy.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/twoPhase.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/twoPhase.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/newPowerModel.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearFuelPinTest/nuclearFuelPinTest.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearFuelPinTest/nuclearFuelPinTest.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedTemperatureFMU/fixedTemperatureFMU.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedTemperatureFMU/fixedTemperatureFMU.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/heatedPin/heatedPin.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/heatedPin/heatedPin.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS/XS.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS/XS.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS/include/readNuclearData.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS/include/setNeutronicsConstants.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem/XSLowMem.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem/XSLowMem.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem/include/readNuclearDataLowMem.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem/include/setNeutronicsConstantsLowMem.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/setXSFields.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/setXSFieldsSN.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/solveNeutronics.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/solveNeutronicsAdjoint.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/solveNeutronicsSN.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SP3/include/solveNeutronicsSP3.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/createNeutronicsFields.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultGetCouplingFieldRefs.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultInterpolateCouplingFields.H",
+		"/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.H"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"fissi",
+			"fiss",
+			"info",
+			"linearizedSemiImplicitHeatSource",
+			"R",
+			"cellToRegion_",
+			"dA",
+			"foun",
+			"HSumi",
+			"R_",
+			"R",
+			"dR",
+			"nodesNumber",
+			"regionNames",
+			"regionNames_",
+			"f0",
+			"foundBoundaryTemperatures",
+			"fractionOfPowerFromNeutronics",
+			"setInterfacialArea",
+			"lumpedStructure",
+			"nuclearFuelPin",
+			"get",
+			"seti",
+			"setRegionField",
+			"powerDensityNeutronics",
+			"correctT",
+			"surfaceHeatFlux_",
+			"TFuelAv",
+			"TFuelAv_",
+			"powerd",
+			"fractionOfPowerFromNeutronics",
+			"fractionOfPowerFromNeutronics_",
+			"nuclearPebbleAverage",
+			"mathj",
+			"math",
+			"late",
+			"war",
+			"erro",
+			"err",
+			"latex",
+			"fractionToSecondaryPower",
+			"powerd",
+			"liquid",
+			"nuclearFuelPin",
+			"powerp",
+			"fuelFractio",
+			"fractionToSecondaryPower",
+			"powerd",
+			"powerDensityOrig_",
+			"powerd",
+			"powerDensityOrig_",
+			"powerDensityNeutronics_",
+			"powerDensityOrig_",
+			"fuelf",
+			"fuel f",
+			"            volScalarField secondaryPowerVolumeraction_;\n            volScalarField fractionToSecondaryPower_;",
+			"powerd",
+			"powerDensityToLiquid_",
+			"power(",
+			"power",
+			"powerDens",
+			"powerDensityOrig_",
+			"powerd",
+			"powerDensityOrig_",
+			"powerd",
+			"liquidf",
+			"powerd",
+			"powerDensityPtr_",
+			"interp",
+			"liqui",
+			"powerd",
+			"powerp",
+			"powerd",
+			"power",
+			"liqui",
+			"power",
+			"powerd",
+			"powerdensityf",
+			"powerde",
+			"nuclearFuelPin",
+			"powerDensity",
+			"powerDensityFromNeutronics",
+			"powerd",
+			"\");\n",
+			"powerd",
+			"liquidf",
+			"powerd",
+			"powerDensityFromNeutronics",
+			"powerde",
+			"power",
+			"powerDensity_",
+			"nuclearFuelPin",
+			"Tfav_",
+			"structure",
+			"nuclearFuelPin",
+			"Tfav_",
+			"updateLocalAvgGlobalMinMaxT",
+			"Tfav_",
+			"powerd",
+			"nuclearFuelPin",
+			"powerDensity_",
+			"fractionOfPowerFromNeutronics",
+			"defa",
+			"powerd",
+			"orig",
+			"TCladOrig_",
+			"TFuelAv",
+			"getc",
+			"powerDensitiesFromNeutronics",
+			"powerDensityList",
+			"powerDensitiesFromNeutronics_",
+			"poe",
+			"orig",
+			"power",
+			"baff",
+			"nuclearFuel",
+			"nuclearFuelPin",
+			"tact",
+			"tac",
+			"tact",
+			"powerDensitiesFromNeutronics_",
+			"powerd",
+			"powerDensitiesFromNeutronics_",
+			"powerd",
+			"powerModelTable",
+			"phase",
+			"structure",
+			"struc"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"lumpedNuclearStructure",
+			"lumpedStructure",
+			"nuclearSteadyStatePebble",
+			"nuclearFuelPinTest",
+			"secondaryPowerDenisty_",
+			"nuclearFuelPinTest",
+			"nuclearFuel",
+			"nuclearFuelPinTest"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "GeN-Foam.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 457.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

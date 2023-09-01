@@ -1,0 +1,241 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      phaseProperties;
+}
+thermalHydraulicsType "twoPhase";
+
+fluid1          "liquid";
+
+fluid2          "vapour";
+
+liquidProperties
+{
+    thermoResidualAlpha 1e-05;
+    stateOfMatter       liquid;
+    dispersedDiameterModel
+    {
+        type    constant;
+        value   0.005;
+    }
+}
+
+vapourProperties
+{
+    thermoResidualAlpha 0.01;
+    stateOfMatter       gas;
+    dispersedDiameterModel
+    {
+        type    constant;
+        value   0.005;
+    }
+}
+
+virtualMassCoeff 1e-1;
+
+structureProperties
+{
+    "pPipe:sPipe:pHX:sHX"
+    {
+        volumeFraction  0.5;
+        Dh              0.005;
+    }
+
+    "heater"
+    {
+        volumeFraction  0.5;
+        Dh              0.005;
+        powerModel
+        {
+            type            fixedPower;
+            volumetricArea  300;
+            T               653.15;
+            Cp              500;
+            rho             7700;
+            powerDensity    1.1e9;
+        }
+    }
+
+    //- This dict lists all the cellZone couples that are supposed to
+    //  represent the primary and secondary side of a heat exchanger.
+    //  Each subDict within the heatExchangers dict (the names are arbitrary)
+    //  represents such couple. The primary keyword specifies the primary side
+    //  cellZone and the secondary the secondary side cellZone. There is no
+    //  difference between primary and secondary, swapping the two keywors
+    //  will results in the same results. A volumetricArea density of the HX 
+    //  wall (an average value between the volumetricArea on the primary and 
+    //  secondary sides) needs to be specified. A wall thermal
+    //  conductance (W/m2/K), which, for planar or thin cylindrical walls, can
+    //  be calculated as wallThickness/wallThermalConductivity is optional and 
+    //  defaults to 0.
+    //  This heatExchanger feature essentially allows to thermally couple
+    //  physically-separated mesh domains that existi within the same 
+    //  mesh region, as testified by this tutorial modelling two channels in 
+    //  the fluidRegion mesh.
+    //  The only limitation in the usage of this feature is that the primary 
+    //  and secondary cellZones must have the same overall volumes.  
+    //  The two cellZones can have any relative displacement along any 
+    //  direction in 3-D space.
+    heatExchangers
+    {
+        "IHX1"
+        {
+            primary             "pHX";
+            secondary           "sHX";
+            volumetricArea      250;
+            wallConductance     2.5e4;
+        }
+    }
+}
+
+regimeMapModels
+{
+    "regimeMap01"
+    {
+        type                oneParameter;
+        interpolationMode   quadratic;
+        parameter           "normalized.alpha.vapour";
+        regimeBounds
+        {
+            "regime0"       ( 0     0.79);
+            "regime1"       ( 0.99  1 );
+        }
+    }   
+}
+
+physicsModels
+{
+    dragModels
+    {
+        "liquid.vapour"
+        {
+            type    SchillerNaumann;
+        }
+        "liquid.structure"
+        {
+            "pPipe:sPipe:pHX:sHX:heater"
+            {
+                type                ReynoldsPower;
+                coeff               0.316;
+                exp                 -0.25;
+            }
+        }
+    }
+
+    twoPhaseDragMultiplierModel
+    {
+        type                LottesFlinn;
+        multiplierFluid     "liquid";
+    }
+
+    heatTransferModels
+    {
+        "liquid.vapour"
+        {
+            "liquid"
+            {
+                type            NusseltReynoldsPrandtlPower;
+                const           10;
+                coeff           0;
+                expRe           0;
+                expPr           0;
+            }
+            "vapour"
+            {
+                type            NusseltReynoldsPrandtlPower;
+                const           10;
+                coeff           0;
+                expRe           0;
+                expPr           0;
+            }
+        }
+        "liquid.structure"
+        {
+            "heater:pHX:sHX"
+            {
+                type            NusseltReynoldsPrandtlPower;
+                const           4;
+                coeff           0.015;
+                expRe           0.7;
+                expPr           0.7;
+            }
+        }
+    }
+
+    pairGeometryModels
+    {
+        "liquid.vapour"
+        {
+            dispersionModel
+            {
+                type            byRegime;
+                regimeMap       "regimeMap01";
+                "regime0"
+                {
+                    type            constant;
+                    dispersedPhase  "vapour";
+                }
+                "regime1"
+                {
+                    type            constant;
+                    dispersedPhase  "liquid";
+                }
+            }
+            interfacialAreaDensityModel
+            {
+                type            spherical;
+            }
+        }
+        "liquid.structure"
+        {
+            contactPartitionModel
+            {
+                type            byRegime;
+                regimeMap       "regimeMap01";
+                "regime0"
+                {
+                    type        constant;
+                    value       1.0;
+                }
+                "regime1"
+                {
+                    type        constant;
+                    value       0;
+                }
+            }
+        }
+    }
+
+    phaseChangeModel
+    {
+        type                heatDriven;
+        mode                conductionLimited;
+        latentHeatModel
+        {
+            type            FinkLeibowitz;
+            adjust          true;
+        }
+        saturationModel
+        {
+            type            BrowningPotter;
+        }
+    }
+}
+
+pMin            10000;
+
+pRefCell        0;
+
+pRefValue       100000;
+
+// ************************************************************************* //

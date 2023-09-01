@@ -1,0 +1,11 @@
+This folder contains three examples of mesh generation for a SFR core using gmsh.
+To obtain each mesh one should:
+- enter the folder
+- type "gmsh esfr.main" in the terminal
+- wait (a long time)
+- mesh the geometry once the window is unfrozed
+- save the .msh file that can then be converted to OpenFOAM using gmshToFoam
+
+Different core geometries can be obtained by changing parameters in coreGeometry.geo. 
+
+These are just supposed to be examples, not general-purpose tools for geometry creation. Comments are limited.

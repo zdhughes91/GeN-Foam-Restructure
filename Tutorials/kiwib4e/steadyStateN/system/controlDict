@@ -1,0 +1,320 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    location        "system";
+    object          controlDict;
+}
+
+application     GeN-Foam;
+
+startFrom       latestTime;
+
+stopAt          endTime;
+
+endTime         10;
+
+deltaT          1e-06;
+
+writeControl    adjustableRunTime;
+
+writeInterval   10;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+solveFluidMechanics false;
+
+solveEnergy     false;
+
+solveNeutronics true;
+
+solveThermalMechanics false;
+
+liquidFuel      false;
+
+adjustTimeStep  true;
+
+maxDeltaT       1;
+
+maxCo           1;
+
+functions
+{
+    mFlowInletCentralUnloaded
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      inletCentralUnloaded;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    mFlowInletFuelElement
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      inletFuelElement;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    mFlowOutletCentralUnloaded
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      outletCentralUnloaded;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    mFlowOutletFuelElement
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      outletFuelElement;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    vInletCentralUnloaded
+    {
+        type            surfaceFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( magU p T alphaRhoPhi alphaPhi );
+        operation       areaAverage;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        name            inletCentralUnloaded;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    vOutletCentralUnloaded
+    {
+        type            surfaceFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( magU p T alphaRhoPhi alphaPhi );
+        operation       areaAverage;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        name            outletCentralUnloaded;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    vInletFuelElement
+    {
+        type            surfaceFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( magU p T alphaRhoPhi alphaPhi );
+        operation       areaAverage;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        name            inletFuelElement;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    vOutletFuelElement
+    {
+        type            surfaceFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( magU p T alphaRhoPhi alphaPhi );
+        operation       areaAverage;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        name            outletFuelElement;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    TInletCentralUnloaded
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      inletCentralUnloaded;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    TInletFuelElement
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      inletFuelElement;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    TOutletCentralUnloaded
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      outletCentralUnloaded;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    TOutletFuelElement
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        region          fluidRegion;
+        regionType      patch;
+        regionName      outletFuelElement;
+        thermoName      thermophysicalProperties;
+        alphaRhoPhiName alphaRhoPhi;
+    }
+    totalPowerFluid
+    {
+        type            volFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( powerDensity.nuclearFuelPin );
+        operation       volIntegrate;
+        region          fluidRegion;
+        regionType      all;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        scaleFactor     0.672179;
+    }
+    totalPowerNeutro
+    {
+        type            volFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( powerDensity );
+        operation       volIntegrate;
+        region          neutroRegion;
+        regionType      all;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        scaleFactor     0.672179;
+    }
+    deltaT
+    {
+        type            subtract;
+        libs            ( fieldFunctionObjects );
+        fields          ( Tco.nuclearFuelPin T );
+        result          deltaT;
+        region          fluidRegion;
+        regionType      cellZone;
+        regionName      fuelElement;
+        log             false;
+        writeFields     true;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+    }
+    limitFieldsDeltaT
+    {
+        type            limitFields;
+        libs            ( fieldFunctionObjects );
+        fields          ( deltaT );
+        limit           min;
+        min             0;
+        result          deltaT;
+        region          fluidRegion;
+        log             false;
+        writeFields     true;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+    }
+    hdeltaT
+    {
+        type            multiply;
+        libs            ( fieldFunctionObjects );
+        fields          ( htc deltaT );
+        result          hdeltaT;
+        region          fluidRegion;
+        log             false;
+        writeFields     true;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+    }
+    totalPowerAhdeltaT
+    {
+        type            volFieldValue;
+        libs            ( fieldFunctionObjects );
+        fields          ( hdeltaT );
+        region          fluidRegion;
+        operation       volIntegrate;
+        log             true;
+        writeFields     false;
+        writeControl    adjustableRunTime;
+        writeInterval   1;
+        scaleFactor     320.835;
+    }
+}
+
+
+// ************************************************************************* //

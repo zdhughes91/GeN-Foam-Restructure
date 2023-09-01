@@ -1,0 +1,118 @@
+/*---------------------------------------------------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+|                                                                             |
+|    Built on OpenFOAM v2212                                                  |
+|    Copyright 2011-2016 OpenFOAM Foundation, 2017-2022 OpenCFD Ltd.         |
+-------------------------------------------------------------------------------
+License
+    This file is part of GeN-Foam.
+
+    GeN-Foam is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
+
+    GeN-Foam is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+
+    This offering is not approved or endorsed by the OpenFOAM Foundation nor
+    OpenCFD Limited, producer and distributor of the OpenFOAM(R)software via
+    www.openfoam.com, and owner of the OPENFOAM(R) and OpenCFD(R) trademarks.
+
+    This particular snippet of code is developed according to the developer's
+    knowledge and experience in OpenFOAM. The users should be aware that
+    there is a chance of bugs in the code, though we've thoroughly test it.
+    The source code may not be in the OpenFOAM coding style, and it might not
+    be making use of inheritance of classes to full extent.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+
+Class
+    Foam::FFDragCoefficientModels::Autruffe
+
+Description
+    Autruffe correlation for the friction factor between two fluids,
+    originally developed for sodium liquid-vapour pairs. See
+    Autruffe, M.I., Wilson, G.J., Stewart, B., Kazimi, M.S., 1979. A proposed 
+    momentum exchange coefficient for two-phase modeling of sodium boiling. 
+    In: Proc. Int. Meeting on Fast Reactor Safety Tech. 4, Seattle, WA, pp. 
+    2515–2521
+
+    Author: 
+    Stefan Radman (sradman@protonmail.com / stefan.radman@epfl.ch)
+
+SourceFiles
+    Autruffe.C
+
+\*---------------------------------------------------------------------------*/
+
+#ifndef AutruffeFFDragCoefficient_H
+#define AutruffeFFDragCoefficient_H
+
+#include "FFDragCoefficientModel.H"
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+namespace Foam
+{
+
+//- Forward declarations
+class FFPair;
+
+namespace FFDragCoefficientModels
+{
+
+/*---------------------------------------------------------------------------*\
+                           Class Autruffe Declaration
+\*---------------------------------------------------------------------------*/
+
+class Autruffe
+:
+    public FFDragCoefficientModel
+{
+protected:
+
+    const fluid& vapour_;
+
+public:
+
+    TypeName("Autruffe");
+
+    //- Constructors
+
+        //- Construct for a fluid-structure pair
+        Autruffe
+        (
+            const FFPair& pair,
+            const dictionary& dict,
+            const objectRegistry& objReg
+        );
+
+        //- Destructor
+        virtual ~Autruffe(){}
+
+
+    //- Member Functions
+
+        //- Drag coefficient
+        virtual scalar value(const label& celli) const;
+};
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+} // End namespace FFDragCoefficientModels
+} // End namespace Foam
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#endif
+
+// ************************************************************************* //

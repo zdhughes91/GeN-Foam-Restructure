@@ -1,0 +1,43 @@
+#!/bin/sh
+# Author: Thomas Guilbaud, 08/10/2022
+
+# Run from this directory
+cd ${0%/*} || exit 1
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+
+createMesh() {
+    # Recover variables
+    case=$1
+    region=$2
+    unvMeshName=$3
+
+    # Convert UNV mesh to OpenFOAM mesh
+    ideasUnvToFoam $case/mesh/$unvMeshName -case $case
+
+    # Remove existing polyMesh in the region
+    if [ -d $case/constant/$region/polyMesh ]; then
+        rm -r $case/constant/${region}/polyMesh
+    fi
+    mv $case/constant/polyMesh $case/constant/$region
+
+    # createPatch -overwrite -case $case -region $region
+
+    # Rescale the mesh
+    transformPoints -scale 1e-2 -case $case -region $region
+
+    # Check mesh quality
+    checkMesh -case $case -region $region
+}
+
+# unvFile=fuelAssemblyCoarseBaffle.unv
+# unvFile=fuelAssemblyCoarseBafflePlenum.unv
+
+# Create meshes for the regions
+createMesh rootCase neutroRegion fuelAssemblyCoarseBaffle.unv
+createMesh rootCase fluidRegion  fuelAssemblyCoarseBaffle.unv
+
+# Create baffles
+createBaffles -case rootCase/ -region fluidRegion -overwrite

@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      esfr_core__res;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+energyGroups 1 ;
+
+precGroups 8 ;
+Tfuelref 9.000000e+02 ;
+TfuelPerturbed 1.200000e+03 ;
+
+zones
+(
+
+	innerCore
+	{
+		IV nonuniform List<scalar> 1 (3.736380e-07  );
+		D nonuniform List<scalar> 1 (1.347500e-02  );
+		nuSigmaEff nonuniform List<scalar> 1 (7.005330e-01  );
+		sigmaPow nonuniform List<scalar> 1 (7.9923969e-12  ); //4.988462e+01
+		scatteringMatrixP0  1  1  (
+									( 3.067870e+01 )
+								);
+		sigmaDisapp nonuniform List<scalar> 1 (6.168000e-01  );
+		chiPrompt nonuniform List<scalar> 1 (1.000000e+00  );
+		chiDelayed nonuniform List<scalar> 1 (1.000000e+00  );
+		Beta nonuniform List<scalar> 8 (7.765420e-05 7.230780e-04 2.890550e-04 6.917210e-04 1.474410e-03 6.585050e-04 5.521770e-04 2.702120e-04  );
+		lambda nonuniform List<scalar> 8 (1.223480e-02 2.829170e-02 4.252440e-02 1.330420e-01 2.924670e-01 6.664880e-01 1.634780e+00 3.554600e+00  );
+	}
+
+	outerCore
+	{
+		IV nonuniform List<scalar> 1 (3.607150e-07  );
+		D nonuniform List<scalar> 1 (1.368090e-02  );
+		nuSigmaEff nonuniform List<scalar> 1 (8.022990e-01  );
+		sigmaPow nonuniform List<scalar> 1 (9.1307402e-12  ); //5.698960e+01
+		scatteringMatrixP0  1  1  (
+									( 3.032680e+01 )
+								);
+		sigmaDisapp nonuniform List<scalar> 1 (6.431000e-01  );
+		chiPrompt nonuniform List<scalar> 1 (1.000000e+00  );
+		chiDelayed nonuniform List<scalar> 1 (1.000000e+00  );
+		Beta nonuniform List<scalar> 8 (7.765420e-05 7.230780e-04 2.890550e-04 6.917210e-04 1.474410e-03 6.585050e-04 5.521770e-04 2.702120e-04  );
+		lambda nonuniform List<scalar> 8 (1.223480e-02 2.829170e-02 4.252440e-02 1.330420e-01 2.924670e-01 6.664880e-01 1.634780e+00 3.554600e+00  );
+		}
+
+);

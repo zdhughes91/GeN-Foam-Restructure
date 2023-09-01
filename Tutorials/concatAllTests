@@ -1,0 +1,28 @@
+#!/bin/sh
+
+rm regressionResults
+touch regressionResults
+
+concat()
+{
+    file=$1
+    echo "\n#==================================================================\
+============*" >> regressionResults
+    cat $file >> regressionResults
+}
+
+concat 1D_boiling/test.out
+concat 1D_CHF/imposedPower/test.out
+concat 1D_CHF/imposedTemperature/test.out
+concat 1D_HX/onePhase/test.out
+concat 1D_HX/twoPhase/test.out
+concat 1D_MSR_pointKinetics/test.out
+concat 1D_PSBT_SC/test.out
+concat 2D_cavityBoussinesq/test.out
+concat 2D_FFTF/test.out
+concat 2D_KNS37-L22/test.out
+concat 2D_MSFR/test.out
+concat 2D_onePhaseAndPointKineticsCoupling/test.out
+concat 2D_voidMotionNoPhaseChange/test.out
+concat 3D_SmallESFR/test.out
+concat Godiva_SN/test.out

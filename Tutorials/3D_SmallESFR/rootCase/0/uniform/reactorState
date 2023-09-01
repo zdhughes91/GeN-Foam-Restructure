@@ -1,0 +1,30 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      reactorState;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+keff            0.9388902; // In eigenvalue calculations, this represent the
+			   // initial guess, and it will be replaves by the
+			   // final result.
+			   // In transient calculations. This parameter
+			   // divides the production term in the neutronics
+			   // equations. In this way, if one performs an
+			   // eigenvalue calculation and then restart from
+			   // there as a transient, the reactor will be
+			   // critical (unless something is changed).
+
+pTarget         8e+08; // Target value for the eigenvalue calculations
+
+// ************************************************************************* //

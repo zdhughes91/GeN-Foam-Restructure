@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "100/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    mFlowInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_massFlow 0.01174737733413552;
+        }
+    }
+    mFlowInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_massFlow 0.1144674183342488;
+        }
+    }
+    mFlowOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_massFlow 0.0117000767277892;
+        }
+    }
+    mFlowOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_massFlow 0.1123898762412009;
+        }
+    }
+    vInletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(inletCentralUnloaded,magU) 15;
+            areaAverage(inletCentralUnloaded,p) 3454506.957466101;
+            areaAverage(inletCentralUnloaded,T) 83.3;
+            areaAverage(inletCentralUnloaded,alphaRhoPhi) -0.005873688667067761;
+            areaAverage(inletCentralUnloaded,alphaPhi) -0.0005401344762306966;
+        }
+    }
+    vOutletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(outletCentralUnloaded,magU) 14.96900765473407;
+            areaAverage(outletCentralUnloaded,p) 3447280;
+            areaAverage(outletCentralUnloaded,T) 83.28877699824197;
+            areaAverage(outletCentralUnloaded,alphaRhoPhi) 0.005850038363894602;
+            areaAverage(outletCentralUnloaded,alphaPhi) 0.0005390498433708932;
+        }
+    }
+    vInletFuelElement
+    {
+        scalar
+        {
+            areaAverage(inletFuelElement,magU) 15;
+            areaAverage(inletFuelElement,p) 4162217.007387664;
+            areaAverage(inletFuelElement,T) 83.29999999999998;
+            areaAverage(inletFuelElement,alphaRhoPhi) -0.00953895152785633;
+            areaAverage(inletFuelElement,alphaPhi) -0.0007220593978193345;
+        }
+    }
+    vOutletFuelElement
+    {
+        scalar
+        {
+            areaAverage(outletFuelElement,magU) 424.8482603701707;
+            areaAverage(outletFuelElement,p) 3447280.000000001;
+            areaAverage(outletFuelElement,T) 1834.160963736555;
+            areaAverage(outletFuelElement,alphaRhoPhi) 0.00936582301034077;
+            areaAverage(outletFuelElement,alphaPhi) 0.02062225391870021;
+        }
+    }
+    TInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_TBulk 83.3;
+        }
+    }
+    TInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_TBulk 83.29999999999998;
+        }
+    }
+    TOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_TBulk 83.28877699824197;
+        }
+    }
+    TOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_TBulk 1834.122149433221;
+        }
+    }
+    totalPowerNeutro
+    {
+        scalar
+        {
+            volIntegrate(neutroRegion,powerDensity) 3748000.557589655;
+        }
+    }
+    totalPowerAhdeltaT
+    {
+        scalar
+        {
+            volIntegrate(fluidRegion,hdeltaT) 3706471.879867138;
+        }
+    }
+}
+
+
+// ************************************************************************* //

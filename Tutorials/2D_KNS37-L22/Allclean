@@ -1,0 +1,4 @@
+#!/bin/bash
+
+shopt -s extglob
+rm -rf -- !(-2|constant|system|Allrun|Allclean|Alltest|README.md|residuals|plot.py|experimentalResults)

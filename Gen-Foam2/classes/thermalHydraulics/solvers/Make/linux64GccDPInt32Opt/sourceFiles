@@ -1,0 +1,8 @@
+SOURCE = \
+thermalHydraulicsModel.C \
+newThermalHydraulicsModel.C \
+onePhase/onePhase.C \
+onePhaseLegacy/onePhaseLegacy.C \
+twoPhase/twoPhase.C \
+
+# sources

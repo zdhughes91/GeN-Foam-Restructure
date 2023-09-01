@@ -1,0 +1,41 @@
+'''
+Legend:
+ - DT  -> stage duration
+ - dT  -> timeStep
+ - wI  -> writeInterval (runTime)
+ - tC  -> tightCoupling
+ - sFM -> solveFluidMechanics
+ - sE  -> solveEnergy
+ - sN  -> solveNeutronics
+ - eN  -> eigenvalueNeutronics
+ - sTM -> solveThermalMechanics
+ - sfc -> start from case 
+ - ci  -> case identifier
+ - vfp -> volFuelPower to be imposed in the core (in addition to neutronics, if on)
+
+Note: 
+Every line represents parameters that go in the controlDict of the specified case.
+In order to force a certain case (identified by e.g. ci = i) to start from the fields obtained by another case,
+(identified by e.g. ci = j) the sfc (start from case) of the case identified by i needs to be set to j. If the
+case does not require fields from previous steps, set sfc to -1.
+
+'''
+# Solver name  | name
+solverName       GeN-Foam
+
+# Region names | fluid region | neutronics region | thermal-mechanics region
+regions          fluidRegion    neutroRegion        thermoMechanicalRegion
+
+# Parallel     | yes/no | scheme | X Y Z |
+parallel           1      simple   4 1 4
+
+# DT      | dT      | wI      | tC  | sFM | sE  | sN  | eN  | sTM | sfc | ci | vfp
+  100       0.05      100        0     1     0     0     0     0    -1     0   0                #Stage I
+  1000      0.20      1000       0     0     1     0     0     0     0     1   4.46003653394e8  #Stage II
+  100       0.1       100        0     0     0     1     1     0     0     2   0                #Stage III
+  100       0.05      100        0     0     0     0     0     1     1     3   0                #Stage IV
+  700       0.05      700        1     1     1     0     0     0     1     4   4.46003653394e8  #Stage V
+  600       0.05      600        1     0     1     1     1     0     4     5   0                #Stage VII
+  1400      0.05      1400       1     1     1     1     1     0     0     6   0                #Stage VIII
+  600       0.05      600        1     0     1     1     1     1     6     7   0                #Stage IX
+  2000      0.05      2000       1     1     1     1     1     1     0     8   0                #Stage X

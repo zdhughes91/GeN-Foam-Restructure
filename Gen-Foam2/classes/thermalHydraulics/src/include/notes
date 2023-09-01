@@ -1,0 +1,53 @@
+/*
+Why do I need a diameter model? 
+    To be able to compute the Reynolds number(s) and HTCs
+
+How do I compute the Reynolds?
+    I can define multiple Reynolds numbers as:
+        -   fluid-intensive for fluid i Re_i = alphai*Ui*Di/nui
+            with :
+            --  Di = Dh_struct if fluid is continuous;
+            --  Di = D from a diameterModel if the fluid is dispersed;
+        -   fluid-pair Re_p = |U1-U2|*D_disp/nu_cont
+    Pleased note that the different Us in the above equations refer to
+    the real (i.e. not superficial) phase velocity
+
+How to I compute the HTC?
+    It depends on the actual model. However, if a Nusselt-based
+    correlation is used, then:
+        -   for a fluid-structure HTC_i = Nu_i*ki/Di with:
+            --  Nui = func(Re_i) with the fluid-intensive Reynolds;
+            --  Di = Dh_thermoStruct if the fluid is continuous;
+            --  Di = D from a diameterModel if the fluid is dispersed;
+        -   for the fluid-fluid HTC_p = Nu_p*k_cont/D_disp with:
+            -- Nu_p = func(Re_p) with the fluid-pair Reynolds
+
+Observations:
+    -   I need a way to know which phase is dispersed and which phase 
+        is continuous.
+    -   Since there is only one dispersed phase per regime, I only need
+        one diameter model (for now named dispersedPhaseDiameterModel).
+    -   In principle, the interfacialArea between the two fluids and 
+        the hydraulic diameter of the dispersed phases are 
+        inter-dependent. Nonetheless, I still want to give the user 3
+        options:
+        --  specify both an interfacialAreaModel and a dispersedPhase
+            DiameterModel (that are not necesarily compatible);
+        --  specify an interfacialAreaModel and a "fromInterfacialArea"
+            model for the diameter, which computes the dipsersed phase
+            diameter given the current interfacialArea and a topology
+            for the dispersed phase;
+        --  specify a dispersedPhaseDiameterModel and a "fromDiameter"
+            model for the interfacialArea, which computes the 
+            interfacialArea given the current disperspedPhaseDiameter
+            and a topology for the dispersed phase.
+        It is very easy to show the connection between interfacialArea
+        and dispersed phase diameter for the following dispersed phase
+        topologies:
+        --  N bubbles   -> iA=6*alpha_disp/D_bubble (independent of N);
+        --  Cylinder    -> iA=4*alpha_disp/D_cylinder;
+        of course these are simplistic topologies, yet these options of
+        connecting the bubble diameter to the interfacialArea (or vice-
+        versa) might prove quite valuable for the future. Nonetheless,
+        I still need to derive more relations for more topologies.
+*/

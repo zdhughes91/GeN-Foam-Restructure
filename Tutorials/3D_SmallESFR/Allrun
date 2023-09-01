@@ -1,0 +1,76 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+exe="GeN-Foam"
+
+cases="steadyState transient" #"steadyState transient"
+
+runCloneCase()
+{
+    printf "Cloning $2 to case $1..."
+    #foamCloneCase -latestTime $2 $1
+    cp -r $2 $1
+    printf "$2 cloned!\n"
+}
+
+setTransient()
+{
+    runCloneCase $1 $2
+
+    printf "Setting transient case...\n"
+    foamDictionary transient/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set false
+
+    foamDictionary transient/system/fvSolution -entry tightlyCoupled -set true
+
+    foamDictionary transient/system/controlDict -entry startFrom -set latestTime
+    foamDictionary transient/system/controlDict -entry endTime -set 210
+    foamDictionary transient/system/controlDict -entry deltaT -set 1e-05
+    foamDictionary transient/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary transient/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary transient/system/controlDict -entry writeInterval -set 10
+    foamDictionary transient/system/controlDict -entry solveFluidMechanics -set false
+    printf "Case set!\n\n"
+}
+
+for caseName in $cases
+do
+    printf "Preparing to run case $caseName...\n"
+
+    case "$caseName" in
+    "steadyState")
+        runCloneCase $caseName rootCase
+        printf "Steady state case is prepared!\n"
+        ;;
+    "transient")
+
+        printf "Transient case is prepared!\n"
+        setTransient $caseName steadyState
+        ;;
+    esac
+
+    # Start gnuplot if it exist
+    if command -v gnuplot &> /dev/null
+    then
+        gnuplot -e "log='$caseName/log.$exe'" residuals - &> /dev/null &
+    else
+        echo "gnuplot could not be found"
+    fi
+
+    #( cd $caseName && runApplication `getApplication` )
+    printf "Running $exe on $caseName\n"
+    #decomposePar -case $caseName -region thermoMechanicalRegion
+    #decomposePar -case $caseName -region fluidRegion
+    #decomposePar -case $caseName -region neutroRegion
+    #mpirun -np 4 $exe -parallel -case $caseName 2>&1 | tee "$caseName/log.$exe"
+    $exe -case $caseName 2>&1 | tee "$caseName/log.$exe"
+
+    # Kill gnuplot if it was started
+    pkill -x gnuplot &> /dev/null &
+
+done
+
+# expected keff: ~ 0.936874
+#------------------------------------------------------------------------------

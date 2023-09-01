@@ -1,0 +1,67 @@
+========================================
+
+Reading fluidRegion polyMesh
+
+TEMPERATURE AT TIME endTime_1s IN ZONES : innerCore outerCore
+ | In core
+ | Zones: innerCore outerCore
+ | Max of T is 828.104 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of T is 697.9389 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of T is 763.955533185 K
+
+ | In diagrid
+ | Zones: diagrid
+ | Max of T is 671.7915 K at[2.7416665, 1.734723475976807e-18, 2.1083335]m
+ | Min of T is 666.0112 K at[0.13185186666666668, 0.0, 2.1083335]m
+ | Avg of T is 670.731666047 K
+
+ | In upper plenum
+ | Zones: sodium
+ | Max of T is 827.6544 K at[2.1100000000000003, -8.673617379884035e-19, 7.550000000000001]m
+ | Min of T is 662.966 K at[4.9464285, 0.0, 1.95]m
+ | Avg of T is 763.002569344 K
+
+FUEL TEMPERATURE AT TIME endTime_1s IN ZONES : innerCore outerCore
+ | Inner fuel
+ | Zones: innerCore outerCore
+ | Max of TinnerFuel is 1651.298 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TinnerFuel is 1519.652 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TinnerFuel is 1586.36518716 K
+
+ | Average fuel
+ | Zones: innerCore outerCore
+ | Max of TavFuel is 1366.733 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TavFuel is 1236.074 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TavFuel is 1302.35135273 K
+
+ | Outer fuel
+ | Zones: innerCore outerCore
+ | Max of TouterFuel is 1024.06 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TouterFuel is 893.1531 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TouterFuel is 959.539926135 K
+
+CLAD TEMPERATURE AT TIME endTime_1s IN ZONES : innerCore outerCore
+ | Inner clad
+ | Zones: innerCore outerCore
+ | Max of TinnerClad is 860.1062 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TinnerClad is 729.247 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TinnerClad is 795.612591581 K
+
+ | Average clad
+ | Zones: innerCore outerCore
+ | Max of TavClad is 848.0181 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TavClad is 717.1623 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TavClad is 783.526401773 K
+
+ | Outer clad
+ | Zones: innerCore outerCore
+ | Max of TouterClad is 836.6975 K at[2.33, 0.0, 5.859999999999999]m
+ | Min of TouterClad is 705.845 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of TouterClad is 772.207649706 K
+
+RHOK AT TIME endTime_1s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of rhok is 853.04819 kg/m3 at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Min of rhok is 822.823834 kg/m3 at[2.33, 0.0, 5.859999999999999]m
+ | Avg of rhok is 837.71912608 kg/m3
+

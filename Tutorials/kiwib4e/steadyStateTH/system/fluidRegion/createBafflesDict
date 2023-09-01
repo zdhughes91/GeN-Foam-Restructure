@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Whether to convert internal faces only (so leave boundary faces intact).
+// This is only relevant if your face selection type can pick up boundary
+// faces.
+internalFacesOnly   true;
+
+// Baffles to create.
+baffles
+{
+    baffleFaces
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    baffle;
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+                name            baffle_master;
+                type            mappedWall;
+                sampleMode      nearestPatchFace;
+                sampleRegion    fluid;
+                samplePatch     baffle_slave;
+                offsetMode      uniform;
+                offset          (0 0 0);
+
+                patchFields
+                {
+                    epsilon
+                    {
+                        type        zeroGradient;
+                    }
+
+                    k
+                    {
+                        type        zeroGradient;
+                    }
+
+                    p
+                    {
+                        type        zeroGradient;
+                    }
+
+                    p_rgh
+                    {
+                        type        zeroGradient;
+                    }
+
+                    T
+                    {
+                        type        zeroGradient;
+                    }
+
+                    U
+                    {
+                        type        slip;
+                    }
+                }
+            }
+
+            slave
+            {
+                //- Slave side patch
+                name            baffle_slave;
+
+                type            mappedWall;
+                sampleMode      nearestPatchFace;
+                sampleRegion    fluid;
+                samplePatch     baffle_master;
+                offsetMode      uniform;
+                offset          (0 0 0);
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+}
+
+// ************************************************************************* //

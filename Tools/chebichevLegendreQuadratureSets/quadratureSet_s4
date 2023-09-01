@@ -1,0 +1,33 @@
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    constant;
+    object      esfr_core__res;
+}
+
+discreteDirectionsOct 3;
+
+
+ directionUxOct nonuniform List<scalar> 3 (
+3.5989E-01
+8.6885E-01
+3.5947E-01
+);
+ directionUyOct nonuniform List<scalar> 3 (
+8.6885E-01
+3.5989E-01
+3.5947E-01
+);
+ directionUzOct nonuniform List<scalar> 3 (
+3.3998E-01
+3.3998E-01
+8.6114E-01
+);
+ directionWeightsOct nonuniform List<scalar> 3 (
+5.1219E-01
+5.1219E-01
+5.4641E-01
+);

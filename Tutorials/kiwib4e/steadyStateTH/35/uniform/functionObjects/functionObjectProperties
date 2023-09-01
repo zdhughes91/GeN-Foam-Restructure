@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "35/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    mFlowInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_massFlow 0.01174737568065808;
+        }
+    }
+    mFlowInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_massFlow 0.1142273099895811;
+        }
+    }
+    mFlowOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_massFlow 0.01169807563576485;
+        }
+    }
+    mFlowOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_massFlow 0.1121279672799461;
+        }
+    }
+    vInletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(inletCentralUnloaded,magU) 15;
+            areaAverage(inletCentralUnloaded,p) 3454506.188123657;
+            areaAverage(inletCentralUnloaded,T) 83.3;
+            areaAverage(inletCentralUnloaded,alphaRhoPhi) -0.005873687840329039;
+            areaAverage(inletCentralUnloaded,alphaPhi) -0.0005401344762306966;
+        }
+    }
+    vOutletCentralUnloaded
+    {
+        scalar
+        {
+            areaAverage(outletCentralUnloaded,magU) 14.96674507210211;
+            areaAverage(outletCentralUnloaded,p) 3447280;
+            areaAverage(outletCentralUnloaded,T) 83.28863104115527;
+            areaAverage(outletCentralUnloaded,alphaRhoPhi) 0.005849037817882425;
+            areaAverage(outletCentralUnloaded,alphaPhi) 0.0005389564671031984;
+        }
+    }
+    vInletFuelElement
+    {
+        scalar
+        {
+            areaAverage(inletFuelElement,magU) 15;
+            areaAverage(inletFuelElement,p) 4153822.991452317;
+            areaAverage(inletFuelElement,T) 83.29999999999998;
+            areaAverage(inletFuelElement,alphaRhoPhi) -0.009518942499134073;
+            areaAverage(inletFuelElement,alphaPhi) -0.0007220593978193345;
+        }
+    }
+    vOutletFuelElement
+    {
+        scalar
+        {
+            areaAverage(outletFuelElement,magU) 419.455597296133;
+            areaAverage(outletFuelElement,p) 3447280.000000001;
+            areaAverage(outletFuelElement,T) 1814.626733074715;
+            areaAverage(outletFuelElement,alphaRhoPhi) 0.009343997263660978;
+            areaAverage(outletFuelElement,alphaPhi) 0.02035576741857524;
+        }
+    }
+    TInletCentralUnloaded
+    {
+        scalar
+        {
+            inletCentralUnloaded_TBulk 83.3;
+        }
+    }
+    TInletFuelElement
+    {
+        scalar
+        {
+            inletFuelElement_TBulk 83.3;
+        }
+    }
+    TOutletCentralUnloaded
+    {
+        scalar
+        {
+            outletCentralUnloaded_TBulk 83.28863104115527;
+        }
+    }
+    TOutletFuelElement
+    {
+        scalar
+        {
+            outletFuelElement_TBulk 1814.588892803183;
+        }
+    }
+    totalPowerNeutro
+    {
+        scalar
+        {
+            volIntegrate(neutroRegion,powerDensity) 3748000.557589655;
+        }
+    }
+    totalPowerAhdeltaT
+    {
+        scalar
+        {
+            volIntegrate(fluidRegion,hdeltaT) 3652360.76009358;
+        }
+    }
+}
+
+
+// ************************************************************************* //

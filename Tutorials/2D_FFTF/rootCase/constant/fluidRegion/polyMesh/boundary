@@ -1,0 +1,135 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+16
+(
+    vesselWall
+    {
+        type            patch;
+        nFaces          324;
+        startFace       35689;
+    }
+    vesselFront
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          14328;
+        startFace       36013;
+    }
+    vesselBack
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          14328;
+        startFace       50341;
+    }
+    outVesselFrontAndBack
+    {
+        type            patch;
+        nFaces          4120;
+        startFace       64669;
+    }
+    outVesselWall
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          490;
+        startFace       68789;
+    }
+    secLoopFrontAndBack
+    {
+        type            patch;
+        nFaces          4300;
+        startFace       69279;
+    }
+    hotLegSecondaryOutlet
+    {
+        type            patch;
+        nFaces          5;
+        startFace       73579;
+    }
+    coldLegSecondaryInlet
+    {
+        type            patch;
+        nFaces          10;
+        startFace       73584;
+    }
+    secLoopWall
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          525;
+        startFace       73594;
+    }
+    baffle1_master
+    {
+        type            wall;
+        inGroups        2(wall baffle1);
+        nFaces          525;
+        startFace       74119;
+    }
+    baffle1_slave
+    {
+        type            wall;
+        inGroups        2(wall baffle1);
+        nFaces          525;
+        startFace       74644;
+    }
+    baffle2_master
+    {
+        type            wall;
+        inGroups        2(wall baffle2);
+        nFaces          75;
+        startFace       75169;
+    }
+    baffle2_slave
+    {
+        type            wall;
+        inGroups        2(wall baffle2);
+        nFaces          75;
+        startFace       75244;
+    }
+    baffle3
+    {
+        type            mappedWall;
+        inGroups        3(wall mappedPatch baffleFaces);
+        nFaces          8;
+        startFace       75319;
+        sampleMode      nearestPatchFace;
+        sampleRegion    fluid;
+        samplePatch     baffle4;
+    }
+    baffle4
+    {
+        type            mappedWall;
+        inGroups        3(wall mappedPatch baffleFaces);
+        nFaces          8;
+        startFace       75327;
+        sampleMode      nearestPatchFace;
+        sampleRegion    fluid;
+        samplePatch     baffle3;
+    }
+    vesselValve
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5;
+        startFace       75335;
+    }
+)
+
+// ************************************************************************* //

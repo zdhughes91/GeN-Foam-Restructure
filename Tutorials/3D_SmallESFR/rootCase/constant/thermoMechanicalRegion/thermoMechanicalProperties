@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      nuclearData;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+model       linearElasticThermoMechanics; //- Only model currently available
+
+//- Constants needed to calculate deformation of fuel, control rods AND 
+//  structure (1D expansion for fuel and CR, displacement-based solver for 
+//  structures)
+
+planeStress      no;
+
+//- True if there is contact between fuel and cladding (expansion driven by 
+//  cladding)
+linkedFuel       false; 
+fuelOrientation  (0 0 1); 
+TStructRef       668; // reference temperature for zero deformation
+
+// Here below an example of properties that forces the core to
+// deform as desired. You'll see that sponge-like structures
+// are used as a trick. Please notice that the fnal deformation
+// will be a composition of the radial expansion calculated by 
+// a linear-elastic solver using the temperatures and properties
+// of structures, and of the axial expansion obtained using the 
+// temperatures and properties of fuel and control rods.
+// Please also look at the boundary conditions in the 0 folder
+// to get a better understanding of what is happening here.
+
+// As a mater of fact, the base solver was not developed for
+// multimaterial analyses. This will be changed asap
+
+zones
+(
+    innerCore
+    {
+        //for structures
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+        // for fuel (only if there is fuel)
+        TFuelRef            668;
+        alphaFuel           1.1e-5;
+    }
+        
+    outerCore
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+        TFuelRef            668;
+        alphaFuel           1.1e-5;//1.1
+    }
+    
+    follower
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+    }
+    
+    controlRod
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+        // for control rods (only if this is a control rod)
+        TCRRef              668;
+        alphaCR             5.4e-5;
+    }
+    
+    diagrid
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+        }
+        
+    radialReflector
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+    }
+    
+    rest
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+    }
+        
+    softStructure
+    {
+        rho             1000; //density
+        E               1e9;  // Young modulus
+        nu              0.3; // Poisson ratio
+        C               200; // not used
+        k               5; // not used
+        alpha               1.8e-5; // linear expansion coeff (1/K)
+    }
+);
+
+// ************************************************************************* //

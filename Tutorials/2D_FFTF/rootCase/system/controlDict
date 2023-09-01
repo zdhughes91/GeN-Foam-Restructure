@@ -1,0 +1,345 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- General
+
+application         GeN-Foam;
+
+startFrom           startTime;
+
+startTime           0;
+
+stopAt              endTime;
+
+endTime             100;
+
+deltaT              0.001;
+
+writeControl        adjustableRunTime;
+
+writeInterval       100;
+
+purgeWrite          0;
+
+writeFormat         ascii;
+
+writePrecision      7;
+
+writeCompression    false;
+
+timeFormat          general;
+
+timePrecision       8;
+
+runTimeModifiable   true;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- Physics to solve
+
+solveFluidMechanics     true;
+
+solveEnergy             false;
+
+solveNeutronics         false;
+
+solveThermalMechanics   false;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- Solution control
+
+adjustTimeStep      true;
+
+maxDeltaT           2;
+
+maxCo               500;
+
+maxPowerVariation   0.025;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- Mesh control
+
+removeBaffles   true;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- Field write options
+
+writeContinuityErrors true;
+
+// ************************************************************************* //
+
+functions
+{
+    mFlowPrimary
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "pumpMiddleCutPrimary";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+    mFlowSecondary
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      patch;
+        regionName      "coldLegSecondaryInlet";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+    mFlowCore
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "coreMiddleCut";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+    mFlowInnerCore
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "innerCoreMiddleCut";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+    mFlowOuterCore
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "outerCoreMiddleCut";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+    mFlowBypass
+    {
+        type            massFlow;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "bypassMiddleCut";
+        alphaRhoPhiName "alphaRhoPhi";
+        scaleFactor     180;
+    }
+
+    TCoreInlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "coreInlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TCoreOutlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "coreOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TInnerCoreOutlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "innerCoreOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TOuterCoreOutlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "outerCoreOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TVesselInlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "vesselInlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TVesselOutlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "vesselOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    THotLegPrimary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "hotLegMiddleCut";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TColdLegPrimary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "coldLegMiddleCut";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TColdLegSecondary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "secondaryColdLeg";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TIHXInletPrimary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "primaryIHXInlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TIHXOutletPrimary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "primaryIHXOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TIHXInletSecondary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "secondaryIHXInlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TIHXOutletSecondary
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      faceZone;
+        regionName      "secondaryIHXOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TDHXOutlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      patch;
+        regionName      "coldLegSecondaryInlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+    TDHXInlet
+    {
+        type            TBulk;
+        libs            ( "libfieldFunctionObjects.so" );
+        log             true;
+        writeFields     false;
+        region          "fluidRegion";
+        regionType      patch;
+        regionName      "hotLegSecondaryOutlet";
+        thermoName      "thermophysicalProperties";
+        alphaRhoPhiName "alphaRhoPhi";
+    }
+}
+
+//-

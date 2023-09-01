@@ -1,0 +1,13 @@
+###############################################################################
+
+Notes on the Post-processed Results
+
+While the majority of the results should be intuitive to understand in the way
+they are presented, there are only a few remarks to be made.
+
+-	the reported "rhok" is actually rho*rhok (recall that buoyancy is treated via
+	a Boussinesq approximation)
+-   Disp[0] is the radial displacement of the reported structures
+-	the pressure drop is NOT inclusive of the hydrostatic component (it's better
+	to state the obvious) and it consists in the pressure drop across the active
+	fuel region only (i.e. the innerCore and outerCore regions)

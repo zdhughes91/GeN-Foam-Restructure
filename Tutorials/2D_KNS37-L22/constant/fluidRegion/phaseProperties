@@ -1,0 +1,322 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      phaseProperties;
+}
+thermalHydraulicsType "twoPhase";
+
+fluid1          "liquid";
+
+fluid2          "vapour";
+
+liquidProperties
+{
+    thermoResidualAlpha 1e-05;
+    stateOfMatter       liquid;
+    minXLM              0.07;
+    maxXLM              30;
+    dispersedDiameterModel
+    {
+        type    constant;
+        value   0.005469;
+    }
+}
+
+vapourProperties
+{
+    thermoResidualAlpha 0.1;
+    stateOfMatter       gas;
+    minXLM              0.07;
+    maxXLM              30;
+    dispersedDiameterModel
+    {
+        type    constant;
+        value   0.005469;
+    }
+}
+
+virtualMassCoeff 1e-1;
+
+structureProperties
+{
+    "lowIn:topIn"
+    {
+        volumeFraction  0.523128;
+        Dh              0.005469;
+        localTortuosity (0.6366197724 0.6366197724 1.0);
+
+        powerModel
+        {
+            type            heatedPin;
+            innerRadius     0;
+            outerRadius     0.003;
+            k               20;
+            meshSize        6;
+            T               653.15;
+            Cp              500;
+            rho             7700;
+        }
+    }
+    "lowOut:topOut"
+    {
+        volumeFraction  0.373586;
+        Dh              0.01230525;
+        localTortuosity (0.6366197724 0.6366197724 1.0);
+
+        powerModel
+        {
+            type            heatedPin;
+            innerRadius     0;
+            outerRadius     0.003;
+            k               20;
+            meshSize        6;
+            T               653.15;
+            Cp              500;
+            rho             7700;
+        }
+    }
+    "midIn"
+    {
+        volumeFraction  0.523128;
+        Dh              0.005469;
+        localTortuosity (0.6366197724 0.6366197724 1.0);
+
+        powerModel
+        {
+            type            heatedPin;
+            innerRadius     0;
+            outerRadius     0.003;
+            k               20;
+            meshSize        6;
+            T               653.15;
+            Cp              500;
+            rho             7700;
+        }
+    }
+    "midOut"
+    {
+        volumeFraction  0.373586;
+        Dh              0.01230525;
+        localTortuosity (0.6366197724 0.6366197724 1.0);
+
+        powerModel
+        {
+            type            heatedPin;
+            innerRadius     0;
+            outerRadius     0.003;
+            k               20;
+            meshSize        6;
+            T               653.15;
+            Cp              500;
+            rho             7700;
+        }
+    }
+    "pipe"
+    {
+        volumeFraction  0;
+        Dh              0.0531196;
+    }
+
+    powerOffCriterionModel
+    {
+        type            timer;
+        time            12.475;
+    }
+}
+
+regimeMapModels
+{
+    "annularMist"
+    {
+        type                oneParameter;
+        interpolationMode   quadratic;
+        parameter           "normalized.alpha.vapour";
+        regimeBounds
+        {
+            "annular"       (0          0.94);
+            "mist"          (0.99       1);
+        }
+    }
+}
+
+physicsModels
+{
+    dragModels
+    {
+        "liquid.vapour"
+        {
+            type            Autruffe;
+        }
+        "liquid.structure"
+        {
+            "lowIn:midIn:topIn:lowOut:midOut:topOut"
+            {
+                "localZ"
+                {
+                    type                Rehme;
+                    numberOfPins        37;
+                    pinPitch            0.0076;
+                    pinDiameter         0.006;
+                    wireDiameter        0.0016;
+                    wireLeadLen         0.03425;
+                    wetWrapPerimeter    0.17524;
+                }
+                "localX"
+                {
+                    type                ReynoldsPower;
+                    coeff               0.96;
+                    exp                 -0.145;
+                }
+                "localY"
+                {
+                    type                ReynoldsPower;
+                    coeff               0.96;
+                    exp                 -0.145;
+                }
+            }
+            "pipe"
+            {
+                type                ReynoldsPower;
+                coeff               0.316;
+                exp                 -0.25;
+            }
+        }
+    }
+    twoPhaseDragMultiplierModel
+    {
+        type                KottowskiSavatteri;
+        multiplierFluid     "liquid";
+    }
+    virtualMassCoefficientModel
+    {
+        type            constant;
+        value           0.1;
+    }
+    heatTransferModels
+    {
+        "liquid.vapour"
+        {
+            "liquid"
+            {
+                type            NusseltReynoldsPrandtlPower;
+                const           5;
+                coeff           0;
+                expRe           0;
+                expPr           0;
+            }
+            "vapour"
+            {
+                type            NusseltReynoldsPrandtlPower;
+                const           10;
+                coeff           0;
+                expRe           0;
+                expPr           0;
+            }
+        }
+        "liquid.structure"
+        {
+            "lowIn:midIn:topIn:lowOut:midOut:topOut"
+            {
+                type                superpositionNucleateBoiling;
+                forcedConvection
+                {
+                    type            NusseltReynoldsPrandtlPower;
+                    const           7.48467;
+                    coeff           0.02994;
+                    expRe           0.77;
+                    expPr           0.77;
+                }
+                poolBoiling
+                {
+                    type                    Shah;
+                    useExplicitHeatFlux     false;
+                }
+                flowEnhancementFactor
+                {
+                    type            COBRA-TF;
+                }
+                suppressionFactor
+                {
+                    type            COBRA-TF;
+                }
+            }
+        }
+    }
+    pairGeometryModels
+    {
+        "liquid.vapour"
+        {
+            dispersionModel
+            {
+                type        byRegime;
+                regimeMap   "annularMist";
+                "annular"
+                {
+                    type                constant;
+                    dispersedPhase      "vapour";
+                }
+                "mist"
+                {
+                    type                constant;
+                    dispersedPhase      "liquid";
+                }
+            }
+            interfacialAreaDensityModel
+            {
+                type            Schor;
+                pinPitch        0.0076;
+                pinDiameter     0.006;
+            }
+        }
+        "liquid.structure"
+        {
+            contactPartitionModel
+            {
+                type        byRegime;
+                regimeMap   "annularMist";
+                "annular"
+                {
+                    type    constant;
+                    value   1.0;
+                }
+                "mist"
+                {
+                    type    constant;
+                    value   0.25;
+                }
+            }
+        }
+    }
+    phaseChangeModel
+    {
+        type                            heatDriven;
+        mode                            conductionLimited;
+        residualInterfacialArea         1e-6;
+        latentHeatModel
+        {
+            type            FinkLeibowitz;
+        }
+        saturationModel
+        {
+            type            BrowningPotter;
+        }
+    }
+}
+
+pMin            10000;
+
+pRefCell        0;
+
+pRefValue       100000;
+
+// ************************************************************************* //

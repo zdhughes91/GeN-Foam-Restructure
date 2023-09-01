@@ -1,0 +1,122 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+exe="GeN-Foam"
+
+endTimeSSN=10
+endTimeSSTH=100
+endTimeT=1200
+
+# cases="steadyState transient"
+cases="steadyStateN steadyStateTH"
+
+runCloneCase()
+{
+    echo "Cloning $2 to case $1\n"
+    rm -r $1
+    cp -r $2 $1
+    echo "$2 cloned!\n"
+}
+
+setSteadyStateN()
+{
+    runCloneCase $1 $2
+
+    echo "Setting steady state case\n"
+
+    foamDictionary $1/0/fluidRegion/U -entry boundaryField.inletCentralUnloaded.value -set "uniform (0 0 -16.45)"
+    foamDictionary $1/0/fluidRegion/U -entry boundaryField.inletFuelElement.value -set "uniform (0 0 -16.45)"
+    foamDictionary $1/constant/fluidRegion/thermophysicalProperties -entry thermoType.equationOfState -set perfectGas
+
+    foamDictionary $1/system/controlDict -entry endTime -set $endTimeSSN
+    foamDictionary $1/system/controlDict -entry writeInterval -set $endTimeSSN
+    foamDictionary $1/system/controlDict -entry deltaT -set 1e-6
+    foamDictionary $1/system/controlDict -entry solveFluidMechanics -set false
+    foamDictionary $1/system/controlDict -entry solveEnergy -set false
+    foamDictionary $1/system/controlDict -entry solveNeutronics -set true
+    echo "Case set!\n\n"
+}
+
+setSteadyStateTH()
+{
+    runCloneCase $1 $2
+
+    echo "Setting steady state case\n"
+
+    foamDictionary $1/system/controlDict -entry startTime -set $endTimeSSN
+    foamDictionary $1/system/controlDict -entry endTime -set $endTimeSSTH
+    foamDictionary $1/system/controlDict -entry writeInterval -set 1
+    foamDictionary $1/system/controlDict -entry deltaT -set 1e-4
+    foamDictionary $1/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary $1/system/controlDict -entry solveEnergy -set true
+    foamDictionary $1/system/controlDict -entry solveNeutronics -set false
+    echo "Case set!\n\n"
+}
+
+setTransient()
+{
+    runCloneCase $1 $2
+
+    echo "Setting transient case\n"
+
+    # foamDictionary $1/system/controlDict -entry startFrom -set startTime
+    # foamDictionary $1/system/controlDict -entry startTime -set $endTimeSS
+    # foamDictionary $1/system/controlDict -entry endTime -set $endTimeT
+    # foamDictionary $1/system/controlDict -entry writeControl -set timeStep
+    # foamDictionary $1/system/controlDict -entry writeInterval -set 50
+    # foamDictionary $1/system/controlDict -entry solveFluidMechanics -set true
+    # foamDictionary $1/system/controlDict -entry solveEnergy -set true
+    # foamDictionary $1/system/controlDict -entry solveNeutronics -set true
+    # foamDictionary $1/system/controlDict -entry maxCo -set 2.5;
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.h -set 0.95
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.hFinal -set 1.0
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.U -set 1.0
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.UFinal -set 1.0
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.p_rgh -set 1.0
+    # foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.p_rghFinal -set 1.0
+    # foamDictionary $1/system/controlDict -entry maxDeltaT -set 1;
+
+    echo "Case set!\n\n"
+}
+
+for caseName in $cases; do
+    echo "Preparing to run case $caseName\n"
+
+    case "$caseName" in
+        "steadyStateN")
+            setSteadyStateN $caseName rootCase
+            ;;
+        "steadyStateTH")
+            setSteadyStateTH $caseName steadyStateN
+            ;;
+        "transient")
+            setTransient $caseName steadyStateTH
+            ;;
+    esac
+
+    # Start gnuplot if it exist
+    # if command -v gnuplot &> /dev/null
+    # then
+    #     gnuplot -e "log='$caseName/log.$exe'" residuals - &> /dev/null &
+    # else
+    #     echo "gnuplot could not be found"
+    # fi
+
+    # Create a .foam file for vizualization
+    if [ -f $caseName/*.foam ]; then
+        rm $caseName/*.foam
+    fi
+    touch $caseName/${caseName}.foam
+
+    echo "Running $exe on $caseName\n"
+    $exe -case $caseName |
+        tee "$caseName/log.GeN-Foam" |
+        grep --color=auto "Time = "
+
+    # Kill gnuplot if it was started
+    # pkill -x gnuplot &> /dev/null
+
+done

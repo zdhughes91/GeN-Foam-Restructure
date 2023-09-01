@@ -1,0 +1,169 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 574.562;
+
+boundaryField
+{
+    vesselWall
+    {
+        type            zeroGradient;
+    }
+    vesselFront
+    {
+        type            wedge;
+    }
+    vesselBack
+    {
+        type            wedge;
+    }
+    outVesselFrontAndBack
+    {
+        type            zeroGradient;
+    }
+    outVesselWall
+    {
+        type            zeroGradient;
+    }
+    secLoopFrontAndBack
+    {
+        type            zeroGradient;
+    }
+    hotLegSecondaryOutlet
+    {
+        type            zeroGradient;
+    }
+    coldLegSecondaryInlet
+    {
+        type            fixedValue;
+        value           uniform 588.7426;
+        /*
+        This commented BC is to represent what they actually did in the
+        experiment, i.e., increase the DHX outlet T (i.e. the secondary cold
+        leg inlet T) from ~ 575 K to ~ 589 K. However, this whole process is
+        rather slow, so that by the end of it I can totally assume I am at
+        steady state. Thus, I prefer setting simply a fixed value BC at the 
+        final T, rathern than having to actually simulate 20 minutes for
+        nothing
+
+        type            uniformFixedValue;
+        uniformValue    table
+        61
+        (
+        (   0   574.562 )
+        (   108 574.562 )
+        (   178 574.437 )
+        (   188 574.3352    )
+        (   198 574.2333    )
+        (   208 574.562 )
+        (   228 574.9694    )
+        (   238 577.9463    )
+        (   248 582.525 )
+        (   258 587.3815    )
+        (   268 590.8676    )
+        (   278 592.4324    )
+        (   288 592.0898    )
+        (   298 591.2796    )
+        (   308 590.5667    )
+        (   318 590.363 )
+        (   328 590.4648    )
+        (   338 591.8213    )
+        (   348 593.8306    )
+        (   358 596.7704    )
+        (   368 597.5759    )
+        (   378 597.2148    )
+        (   388 593.7472    )
+        (   398 590.0019    )
+        (   408 587.3769    )
+        (   418 587.1546    )
+        (   428 587.2287    )
+        (   438 588.187 )
+        (   448 589.363 )
+        (   458 590.5343    )
+        (   468 591.9972    )
+        (   478 593.0343    )
+        (   488 593.4602    )
+        (   518 591.9324    )
+        (   528 591.1593    )
+        (   538 590.2472    )
+        (   548 589.7009    )
+        (   568 589.5991    )
+        (   578 589.7009    )
+        (   588 590.062 )
+        (   598 590.525 )
+        (   608 590.7657    )
+        (   618 591.0898    )
+        (   638 591.2102    )
+        (   658 590.7009    )
+        (   668 590.1176    )
+        (   688 589.9139    )
+        (   788 589.6963    )
+        (   818 589.2704    )
+        (   828 589.0667    )
+        (   838 588.9648    )
+        (   928 588.863 )
+        (   958 588.6593    )
+        (   968 588.4556    )
+        (   1048    588.3537    )
+        (   1058    588.2519    )
+        (   1098    588.15  )
+        (   1108    588.0481    )
+        (   1148    587.8444    )
+        (   1168    587.7426    )
+        (   1200    588.7426    )
+        )
+        ;
+        value           uniform 574.562;
+        */
+    }
+    secLoopWall
+    {
+        type            zeroGradient;
+    }
+    baffle1_master
+    {
+        type            zeroGradient;
+    }
+    baffle1_slave
+    {
+        type            zeroGradient;
+    }
+    baffle2_master
+    {
+        type            zeroGradient;
+    }
+    baffle2_slave
+    {
+        type            zeroGradient;
+    }
+    baffle3
+    {
+        type            zeroGradient;
+    }
+    baffle4
+    {
+        type            zeroGradient;
+    }
+    vesselValve
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

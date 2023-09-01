@@ -1,0 +1,37 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      esfr_core__res;
+}
+discreteDirectionsOct 3;
+
+ directionUxOct nonuniform List<scalar> 3 (
+3.5989E-01
+8.6885E-01
+3.5947E-01
+);
+ directionUyOct nonuniform List<scalar> 3 (
+8.6885E-01
+3.5989E-01
+3.5947E-01
+);
+ directionUzOct nonuniform List<scalar> 3 (
+3.3998E-01
+3.3998E-01
+8.6114E-01
+);
+ directionWeightsOct nonuniform List<scalar> 3 (
+5.1219E-01
+5.1219E-01
+5.4641E-01
+);

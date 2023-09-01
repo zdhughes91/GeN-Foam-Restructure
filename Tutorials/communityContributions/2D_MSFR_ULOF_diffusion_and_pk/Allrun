@@ -1,0 +1,173 @@
+#!/bin/sh
+# Tutorial prepared based on the PhD work of Peter German (Texas A&M, peter.german@tamu.edu)
+
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+exe="GeN-Foam"
+
+cases="steadyStateTH steadyStateEN steadyStateFluid_Dynamics transient_diff transient_PK"
+
+runCloneCase()
+{
+    printf "Cloning $2 to case $1..."
+    cp -r $2 $1
+    printf "$2 cloned!\n"
+}
+
+setSteadyStateTH()
+{
+    runCloneCase $1 $2
+    printf "Setting steady state case...\n"
+    foamDictionary steadyStateTH/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set true
+    foamDictionary steadyStateTH/system/fvSolution -entry tightlyCoupled -set false
+    foamDictionary steadyStateTH/system/controlDict -entry startFrom -set startTime
+    foamDictionary steadyStateTH/system/controlDict -entry startTime -set 0
+    foamDictionary steadyStateTH/system/controlDict -entry endTime -set 15
+    foamDictionary steadyStateTH/system/controlDict -entry deltaT -set 0.001
+    foamDictionary steadyStateTH/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary steadyStateTH/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary steadyStateTH/system/controlDict -entry writeInterval -set 1
+    foamDictionary steadyStateTH/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary steadyStateTH/system/controlDict -entry solveEnergy -set false
+    foamDictionary steadyStateTH/system/controlDict -entry solveNeutronics -set false
+    foamDictionary steadyStateTH/system/controlDict -entry solveThermalMechanics -set false
+    printf "Case set!\n\n"
+}
+
+setSteadyStateEN()
+{
+    runCloneCase $1 $2
+    printf "Setting steady state  case...\n"
+    foamDictionary steadyStateEN/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set true
+    foamDictionary steadyStateEN/system/fvSolution -entry tightlyCoupled -set false
+    foamDictionary steadyStateEN/system/controlDict -entry startFrom -set startTime
+    foamDictionary steadyStateEN/system/controlDict -entry startTime -set 15
+    foamDictionary steadyStateEN/system/controlDict -entry endTime -set 165
+    foamDictionary steadyStateEN/system/controlDict -entry deltaT -set 0.001
+    foamDictionary steadyStateEN/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary steadyStateEN/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary steadyStateEN/system/controlDict -entry writeInterval -set 150
+    foamDictionary steadyStateEN/system/controlDict -entry solveFluidMechanics -set false
+    foamDictionary steadyStateEN/system/controlDict -entry solveEnergy -set true
+    foamDictionary steadyStateEN/system/controlDict -entry solveNeutronics -set true
+    foamDictionary steadyStateEN/system/controlDict -entry solveThermalMechanics -set false
+    foamDictionary steadyStateEN/system/controlDict -entry maxCo  -set 1
+    printf "Case set!\n\n"
+}
+
+
+setSteadyStateFluid_Dynamics()
+{
+    runCloneCase $1 $2
+    printf "Setting steady state  case...\n"
+    foamDictionary steadyStateFluid_Dynamics/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set true
+    foamDictionary steadyStateFluid_Dynamics/system/fvSolution -entry tightlyCoupled -set true
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry startFrom -set startTime
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry startTime -set 165
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry endTime -set 200
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry deltaT -set 0.001
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry writeInterval -set 35
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry solveEnergy -set true
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry solveNeutronics -set true
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry solveThermalMechanics -set false
+    foamDictionary steadyStateFluid_Dynamics/system/controlDict -entry maxCo  -set 1
+    printf "Case set!\n\n"
+}
+
+
+settransient_diff()
+{
+    runCloneCase $1 $2
+    printf "Setting transient case...\n"
+    foamDictionary transient_diff/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set false
+    foamDictionary transient_diff/system/neutroRegion/fvSolution -entry integralPredictor  -set  true
+    foamDictionary transient_diff/system/fvSolution -entry tightlyCoupled -set true
+    foamDictionary transient_diff/system/controlDict -entry deltaT -set 0.001
+    foamDictionary transient_diff/system/controlDict -entry startFrom -set startTime
+    foamDictionary transient_diff/system/controlDict -entry startTime -set 200
+    foamDictionary transient_diff/system/controlDict -entry endTime -set 240
+    foamDictionary transient_diff/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary transient_diff/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary transient_diff/system/controlDict -entry writeInterval -set 0.5
+    foamDictionary transient_diff/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary transient_diff/system/controlDict -entry solveEnergy -set true
+    foamDictionary transient_diff/system/controlDict -entry solveNeutronics -set true
+    foamDictionary transient_diff/system/controlDict -entry solveThermalMechanics -set false
+    foamDictionary transient_diff/system/controlDict -entry maxCo  -set 1
+    printf "Case set!\n\n"
+}
+
+settransient_PK()
+{
+    runCloneCase $1 $2
+    printf "Setting transient case...\n"
+    foamDictionary transient_PK/constant/neutroRegion/neutronicsProperties -entry model -set pointKinetics
+    foamDictionary transient_PK/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set false
+    foamDictionary transient_PK/system/fvSolution -entry tightlyCoupled -set false
+    foamDictionary transient_PK/system/controlDict -entry startFrom -set startTime
+    foamDictionary transient_PK/system/controlDict -entry deltaT -set 0.001
+    foamDictionary transient_PK/system/controlDict -entry startTime -set 200
+    foamDictionary transient_PK/system/controlDict -entry endTime -set 240
+    foamDictionary transient_PK/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary transient_PK/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary transient_PK/system/controlDict -entry writeInterval -set 0.5
+    foamDictionary transient_PK/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary transient_PK/system/controlDict -entry solveEnergy -set true
+    foamDictionary transient_PK/system/controlDict -entry solveNeutronics -set true
+    foamDictionary transient_PK/system/controlDict -entry solveThermalMechanics -set false
+    foamDictionary transient_PK/system/controlDict -entry maxCo  -set 1
+    printf "Case set!\n\n"
+}
+
+
+for caseName in $cases
+do
+    printf "Preparing to run case $caseName...\n"
+
+    case "$caseName" in
+    "steadyStateTH")
+        setSteadyStateTH $caseName rootCase
+        printf "Steady state th case is prepared!\n"
+        ;;
+    "steadyStateEN")
+        setSteadyStateEN $caseName steadyStateTH
+        printf "Steady state NE case is prepared!\n"
+        ;;
+    "steadyStateFluid_Dynamics")
+        setSteadyStateFluid_Dynamics $caseName steadyStateEN
+        printf "Steady state Fluid_Dynamics case is prepared!\n"
+        ;;
+    "transient_diff")
+        printf "Transient case entered...\n"
+        settransient_diff $caseName steadyStateFluid_Dynamics
+        ;;
+    "transient_PK")
+        printf "Transient case entered...\n"
+        settransient_PK $caseName steadyStateFluid_Dynamics
+	;;
+    esac
+
+    # Start gnuplot if it exist
+    if command -v gnuplot &> /dev/null
+    then
+        gnuplot -e "log='$caseName/log.$exe'" residuals - &> /dev/null &
+    else
+        echo "gnuplot could not be found"
+    fi
+
+    #( cd $caseName && runApplication `getApplication` )
+    printf "Running $exe on $caseName\n"
+    $exe -case $caseName 2>&1 | tee "$caseName/log.$exe"
+
+    # Kill gnuplot if it was started
+    pkill -x gnuplot &> /dev/null &
+    
+done
+
+#------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Author: Thomas Guilbaud, 2022/10/13
+
+if [ $# -ne 1 ]; then
+    echo "Usage:  restore0Dir <dirToCopy>"
+    exit 1
+fi
+
+dirToCopy=$1
+
+path=$(dirname $dirToCopy)
+
+if [ -d $path/0 ]; then
+    rm -r $path/0
+fi
+
+cp -r $dirToCopy $path/0

@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# --- Run from this directory
+cd ${0%/*} || exit 1
+
+# --- Initialize the output file
+resFile=test.out
+rm $resFile
+touch $resFile
+
+# --- Run the simulation
+echo -e "Run tutorial 3D_SmallMSFR ...\n" | tee -a $resFile
+./Allrun_parallel >> log.simulation
+echo -e "Done running tutorial 3D_SmallMSFR ...\n" | tee -a $resFile
+
+# --- Check it ran
+isConverge()
+{
+    folder=$1
+    name=$2
+    string=$(tail -3 ./$folder/log.GeN-Foam | grep End)
+    if [ "$string" = "End" ]; then
+        echo -e "$name has converged \n" | tee -a $resFile
+    else
+        echo -e "$name has NOT converged \n" | tee -a $resFile
+        exit 1
+    fi
+}
+
+isConverge steadyState "Steady state"
+isConverge transient   "Transient"
+
+# --- Recover the results
+keff=$(foamDictionary ./steadyState/processor0/200/uniform/reactorState -entry keff -value)
+totalPower=$(
+    awk '{ print $1+0 }' <<<$(
+        grep power ./transient/log.GeN-Foam |
+        tail -1 |
+        egrep -o "[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?."
+    )
+)
+
+expectedKeff=0.936827
+expectedTotalPower=800000000
+
+
+# --- Check that results are correct
+isInRange()
+{
+    ref=$1
+    value=$2
+    error=$3
+    valueMin=$(bc -l <<<"$value*(1-$error)")
+    valueMax=$(bc -l <<<"$value*(1+$error)")
+    if (( $(echo "$valueMin <= $ref && $ref <= $valueMax" | bc -l) )); then
+        echo 0
+    elif (( $(echo "$valueMax <= $ref && $ref <= $valueMin" | bc -l) )); then
+        echo 0
+    else
+        echo 1
+    fi
+}
+
+error=0.001
+echo "Reactivity contributions with $error relative error" | tee -a $resFile
+if  [ $(isInRange $expectedKeff       $keff       $error) -eq 0 ] &&
+    [ $(isInRange $expectedTotalPower $totalPower $error) -eq 0 ]
+then
+    echo "Perfect match:" | tee -a $resFile
+    echo "                 | Simulated | Expected" | tee -a $resFile
+    echo "     keff        | $keff | $expectedKeff" | tee -a $resFile
+    echo "     Total power | $totalPower | $expectedTotalPower " | tee -a $resFile
+else
+    echo "Divergent results:" | tee -a $resFile
+    echo "                 | Simulated | Expected" | tee -a $resFile
+    echo "     keff        | $keff | $expectedKeff" | tee -a $resFile
+    echo "     Total power | $totalPower | $expectedTotalPower " | tee -a $resFile
+    exit 1
+fi
+
+# --- Exit successfully
+exit 0

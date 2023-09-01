@@ -1,0 +1,17 @@
+========================================
+
+Reading fluidRegion polyMesh
+
+MASS FLOW AT TIME endTime_0s IN ZONES : innerCore outerCore
+ | Total core flow rate = 18738.2278178 kg/s
+
+
+ | Zones: innerCore outerCore
+ | Max of magU is 3.57738232691 m/s at[0.8899999999999999, 0.0, 5.0600000000000005]m
+ | Min of magU is 3.56851232291 m/s at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of magU is 3.57412073654 m/s
+
+PRESSURE DROP AT TIME endTime_0s IN ZONES : innerCore outerCore
+ | Pressure drop = 54112.5044546 Pa
+
+

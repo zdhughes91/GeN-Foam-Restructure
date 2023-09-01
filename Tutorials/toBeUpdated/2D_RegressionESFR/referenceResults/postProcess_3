@@ -1,0 +1,15 @@
+========================================
+Reading thermoMechanicalRegion polyMesh
+
+CORE RADIAL DISPLACEMENT AT TIME endTime_3s IN ZONES : outerCore
+ | Zones: outerCore
+ | Max of Disp[0] is 0.139535655738 % at[2.33, 0.0, 5.0600000000000005]m
+ | Min of Disp[0] is 0.040549204918 % at[1.89, 1.4456028966473392e-19, 5.859999999999999]m
+ | Avg of Disp[0] is 0.0991027676864 %
+
+CORE AXIAL DISPLACEMENT AT TIME endTime_3s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of fuelDisp is 1.250514e-16 % at[2.33, 0.0, 6.0664285715]m
+ | Min of fuelDisp is -1.750081e-16 % at[1.2855555555, 0.0, 5.859999999999999]m
+ | Avg of fuelDisp is -6.98772029306e-18 %
+

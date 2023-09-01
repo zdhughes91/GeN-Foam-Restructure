@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/fluidRegion";
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            heRhoThermo;    // General thermophysical model calculation
+                                    // based on enthalpy h or internal energy e,
+                                    // and density rho
+    mixture         pureMixture;
+    transport       const;          // Constant transport properties
+    // transport       polynomial;
+    thermo          hConst;         // Suppose Cp constant and evaluate enthalpy
+                                    // h and entropy s
+    // thermo          hPolynomial;
+    equationOfState perfectGas;     // Perfect gas equation of state (not icoPolynomial)
+    specie          specie;         // Thermophysical properties of species,
+                                    // derived from Cp, h and/or s
+    energy          sensibleEnthalpy;
+}
+
+// Hydrogen values at 600K and 3.7 MPa pressure from NIST.
+// At this temperature and pressure, the hydrogen is supercritical.
+// https://webbook.nist.gov/cgi/fluid.cgi?P=3.7&TLow=80&THigh=1000&TInc=10&Digits=5&ID=C1333740&Action=Load&Type=IsoBar&TUnit=K&PUnit=MPa&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+
+pRef        3.7e6; // Pa
+
+mixture
+{
+    specie
+    {
+        molWeight   2.016; // g/mol
+    }
+    thermodynamics
+    {
+        // rho         1.4770; // kg/m3
+        Cp          14566; // J/kg/K
+        Cv          10439; // J/kg/K
+        Hf          58214; // J/kg (heat of fusion) // 8331.7; // J/kg (enthalpy)
+        Sf          48.655e3; // J/kg/K (entropy)
+        Tref        600; // K
+    }
+    transport
+    {
+        mu          1.4462e-05; // Pa.s
+        Pr          0.701; // https://lambdageeks.com/prandtl-number/
+        // kappa       0.31186; // W/m/K
+    }
+
+    /*
+    specie
+    {
+        molWeight   2.016; // g/mol
+    }
+    equationOfState
+    {
+        rhoCoeffs<8> (
+            2.98268929e+02
+            -1.31815938e+00
+            2.81092249e-03
+            -3.26269179e-06
+            2.16673749e-09
+            -8.20663892e-13
+            1.64676554e-16
+            -1.35696602e-20
+        );
+    }
+    thermodynamics
+    {
+        CpCoeffs<8> (
+            1.00760488e+04
+            2.84791436e+01
+            -7.09497729e-02
+            8.89536624e-05
+            -6.01619623e-08
+            2.26631116e-11
+            -4.48534491e-15
+            3.63746462e-19
+        );
+        Hf          58214; // J/kg (heat of fusion) // enthalpy = 3958.3e3;
+        Sf          53.519e3; // J/kg/K (entropy)
+    }
+    transport
+    {
+        //mu                  8.9385e-6; // Pa.s
+        //Pr                  0.701; // https://lambdageeks.com/prandtl-number/
+        muCoeffs<8>         (8.9385e-6 0 0 0 0 0 0 0);
+        kappaCoeffs<8>      (0.01238494 0.00057219 0 0 0 0 0 0);
+    }
+
+
+    */
+}
+
+
+// ************************************************************************* //

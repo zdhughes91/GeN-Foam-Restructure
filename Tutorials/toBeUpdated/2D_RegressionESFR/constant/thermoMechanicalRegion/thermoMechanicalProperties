@@ -1,0 +1,88 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      nuclearData;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+model 		linearElasticThermoMechanics;//only model available now
+
+planeStress     no;
+linkedFuel      false;
+fuelOrientation   (0 0 1);
+TrefStructure			668;
+
+zones
+(
+    innerCore
+    {
+		rho				1000;
+		E				1e5;
+		nu				0.1;
+		C				200;
+		k				5;
+		alpha				0;
+		TrefFuel			668;
+		alphaFuel			1.1e-5;
+    }
+
+    outerCore
+    {
+		rho				1000;
+		E				1e5;
+		nu				0.1;
+		C				200;
+		k				5;
+		alpha				0;
+		TrefFuel			668;
+		alphaFuel			1.1e-5;
+    }
+
+    diagrid
+    {
+		rho				1000;
+		E				1e9;
+		nu				0.3;
+		C				200;
+		k				5;
+		alpha				1.8e-5;
+		TrefFuel			0;
+		alphaFuel			0.;
+    }
+
+    radialReflector
+    {
+		rho				1000;
+		E				1e9;
+		nu				0.3;
+		C				200;
+		k				5;
+		alpha				1.8e-5;
+		TrefFuel			0;
+		alphaFuel			0;
+    }
+
+    softStructure
+    {
+		rho				1000;
+		E				1e5;
+		nu				0.1;
+		C				200;
+		k				5;
+		alpha				0;
+		TrefFuel			0;
+		alphaFuel			0;
+    }
+);
+
+// ************************************************************************* //

@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      externalCouplingDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+externalFunctions
+{
+    
+    extSensor
+    {
+        type extSensor;
+        sensorName powerDensitySensor;
+        fieldName powerDensity;
+        region     fluidRegion;
+        sensorPosition (0.2 0.2 2) ;
+        //sensorPosition (5 5 2.5);
+    }
+
+    fieldIntegralToFMU
+    {
+        type fieldIntegralToFMU;
+        nameFMU hxPowerOut;
+        fieldName heatFlux.structure;
+        region     fluidRegion;
+        cellZone hx;
+    }  
+
+}
+// ************************************************************************* //

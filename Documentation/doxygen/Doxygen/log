@@ -1,0 +1,491 @@
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching INPUT for files to process...
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/images
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/multiphysicsControl
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/albedoSP3
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SP3
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SP3/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XS/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/XS/XSLowMem/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/lnInclude
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/Make
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/Make/linux64GccDPInt32Opt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/Make/linux64GccDPInt32Opt/onePhase
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/Make/linux64GccDPInt32Opt/onePhaseLegacy
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/Make/linux64GccDPInt32Opt/twoPhase
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/include/equations
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhase/include/equations/pEqnRoutines
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/onePhaseLegacy/include/equations
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/include/alphaEqnsRoutines
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/include/alphaEqnsRoutines/myMULES
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/solvers/twoPhase/include/pEqnRoutines
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/boundaryConditions
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/boundaryConditions/NusseltThermalBaffle1D
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/boundaryConditions/timeFieldTable
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/boundaryConditions/velocityRundown
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/customPimpleControl
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/fieldDiffExtents
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/massFlow
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/patchScalarFieldValue
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/pressureDrop
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/stopIfMaxFieldDiff
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/functionObjects/TBulk
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/include/IOFieldField
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/lnInclude
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/boundaryConditions
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/boundaryConditions/NusseltThermalBaffle1D
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/boundaryConditions/timeFieldTable
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/boundaryConditions/velocityRundown
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/customPimpleControl
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/fieldDiffExtents
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/massFlow
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/patchScalarFieldValue
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/pressureDrop
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/stopIfMaxFieldDiff
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/functionObjects/TBulk
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/include/IOFieldField
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/fluid
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/heatExchanger
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerModels/fixedPower
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerModels/fixedTemperature
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerModels/heatedPin
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerModels/nuclearFuelPin
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerOffCriterionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerOffCriterionModels/fieldValue
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/powerOffCriterionModels/timer
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/phaseModels/structureModels/pump
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/contactPartitionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/contactPartitionModels/complementary
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/contactPartitionModels/linear
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dispersionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dispersionModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/Autruffe
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/Bestion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/BestionTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/SchillerNaumann
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FFDragCoefficientModels/Wallis
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/BaxiDalleDonne
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/Churchill
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/Engel
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/modifiedEngel
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/Rehme
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/FSDragCoefficientModels/ReynoldsPower
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/ChenKalish
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/Kaiser74
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/Kaiser88
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/KottowskiSavatteri
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/LockhartMartinelli
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/LottesFlinn
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/dragModels/twoPhaseDragMultiplierModels/LottesFlinnNguyen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/fluidDiameterModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/fluidDiameterModels/isomolarBubble
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/fluidDiameterModels/isothermalBubble
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/fluidDiameterModels/pipeFilm
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/fluidDiameterModels/WallisFilm
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels/Nusselt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Gorenflo
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoiling
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingTRACECHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingVapourTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Nusselt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/NusseltAndWall
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Shah
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels/constantCHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels/lookUpTableCHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/LeidenFrostTemperatureModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/LeidenFrostTemperatureModels/GroeneveldStewart
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/Chen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/COBRA-TF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/RezkallahSims
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels/CachardLiquid
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels/CachardVapour
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels/SahaZuber
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/superpositionNucleateBoiling
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels/Chen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels/COBRA-TF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/TONBModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/TONBModels/Basu
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/interfacialAreaModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/interfacialAreaModels/annular
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/interfacialAreaModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/interfacialAreaModels/Schor
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/interfacialAreaModels/spherical
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/forcedConstant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/heatDriven
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/latentHeatModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/latentHeatModels/FinkLeibowitz
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/latentHeatModels/fromThermophysicalProperties
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/latentHeatModels/water
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/saturationModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/saturationModels/BrowningPotter
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/saturationModels/constantTemperature
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/saturationModels/water
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phaseChangeModels/saturationModels/waterTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/phasePairs
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/regimeMapModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/regimeMapModels/oneParameter
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/regimeMapModels/twoParameters
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/templatedModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/templatedModels/byRegime
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/templatedModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/turbulenceModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/virtualMassModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/Make/linux64GccDPInt32Opt/physicsModels/virtualMassModels/virtualMassCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/fluid
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/byZone
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/heatExchanger
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedPower
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/fixedTemperature
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/heatedPin
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerModels/nuclearFuelPin
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerOffCriterionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerOffCriterionModels/fieldValue
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/powerOffCriterionModels/timer
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/phaseModels/structureModels/pump
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/contactPartitionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/contactPartitionModels/complementary
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/contactPartitionModels/linear
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dispersionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dispersionModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/Autruffe
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/Bestion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/BestionTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/SchillerNaumann
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FFDragCoefficientModels/Wallis
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/BaxiDalleDonne
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/Churchill
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/Engel
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/modifiedEngel
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/Rehme
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/FSDragCoefficientModels/ReynoldsPower
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/ChenKalish
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/Kaiser74
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/Kaiser88
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/KottowskiSavatteri
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/LockhartMartinelli
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/LottesFlinn
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/dragModels/twoPhaseDragMultiplierModels/LottesFlinnNguyen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/fluidDiameterModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/fluidDiameterModels/isomolarBubble
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/fluidDiameterModels/isothermalBubble
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/fluidDiameterModels/pipeFilm
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/fluidDiameterModels/WallisFilm
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FFHeatTransferCoefficientModels/Nusselt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Gorenflo
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoiling
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingTRACECHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/multiRegimeBoilingVapourTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Nusselt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/NusseltAndWall
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/Shah
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels/constantCHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/criticalHeatFluxModels/lookUpTableCHF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/LeidenFrostTemperatureModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/CHFModels/LeidenFrostTemperatureModels/GroeneveldStewart
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/Chen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/COBRA-TF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/flowEnhancementFactorModels/RezkallahSims
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels/CachardLiquid
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/postCHFModels/CachardVapour
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/subCooledBoilingFractionModels/SahaZuber
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/superpositionNucleateBoiling
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels/Chen
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/suppressionFactorModels/COBRA-TF
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/TONBModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/heatTransferModels/FSHeatTransferCoefficientModels/subModels/TONBModels/Basu
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/interfacialAreaModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/interfacialAreaModels/annular
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/interfacialAreaModels/NoKazimi
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/interfacialAreaModels/Schor
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/interfacialAreaModels/spherical
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/forcedConstant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/heatDriven
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/latentHeatModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/latentHeatModels/FinkLeibowitz
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/latentHeatModels/fromThermophysicalProperties
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/latentHeatModels/water
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/saturationModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/saturationModels/BrowningPotter
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/saturationModels/constantTemperature
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/saturationModels/water
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phaseChangeModels/saturationModels/waterTRACE
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/phasePairs
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/regimeMapModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/regimeMapModels/oneParameter
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/regimeMapModels/twoParameters
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/templatedModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/templatedModels/byRegime
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/templatedModels/constant
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/turbulenceModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/turbulenceModels/LaheyKEpsilon
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/turbulenceModels/mixtureKEpsilon
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/turbulenceModels/porousKEpsilon
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/turbulenceModels/porousKEpsilon2PhaseCorrected
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/virtualMassModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermalHydraulics/src/physicsModels/virtualMassModels/virtualMassCoefficientModels
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermoMechanics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermoMechanics/linearElastic
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermoMechanics/linearElastic/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/thermoMechanics/tractionDisplacement
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/main/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/multiphysicsControl
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/adjointDiffusion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/albedoSP3
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/diffusion
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/pointKinetics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/SN
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/SN/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/SP3
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/XS
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/XS/XS
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/neutronics/XS/XSLowMem
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/thermoMechanics
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/thermoMechanics/linearElastic
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/classes/thermoMechanics/tractionDisplacement
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/include
+Searching for files in directory /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/Make/linux64GccDPInt32Opt/main
+Reading and parsing tag files
+Parsing files
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/README.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Compiling_GeN-Foam.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Coupling.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Important_notes.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Main_page.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Neutronics.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Post_processing.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Pre_processing.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Running_GeN-Foam.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Source_code.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/thermalHydraulics.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/thermoMechanics.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Tips_and_tricks.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/Tutorials.md...
+Reading /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/Documentation/doxygen/files/User_manual.md...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/multiphysicsControl/multiphysicsControl.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/multiphysicsControl/multiphysicsControl.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/multiphysicsControl/multiphysicsControl.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/multiphysicsControl/multiphysicsControl.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/class/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C:234: warning: include file createNeutronicsFieldsAdjoint.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C:252: warning: include file defaultGetCouplingFieldRefs.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C:260: warning: include file defaultInterpolateCouplingFields.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C:269: warning: include file solveNeutronicsAdjoint.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/solveNeutronicsAdjoint.H:88: warning: include file normFluxes.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C:219: warning: include file createNeutronicsFields.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C:237: warning: include file defaultGetCouplingFieldRefs.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C:245: warning: include file defaultInterpolateCouplingFields.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C:254: warning: include file solveNeutronics.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+es/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/calcScatteringSourceAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/calcScatteringSourceAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/createFluxMatricesAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/createFluxMatricesAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/createNeutronicsFieldsAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/createNeutronicsFieldsAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/fluxEqAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/fluxEqAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initialize_adjointFlux_chiD.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initialize_adjointFlux_chiD.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initializeDelayedNeutroSourceAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initializeDelayedNeutroSourceAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initializeNeutroSourceAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/initializeNeutroSourceAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/normFluxesAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/normFluxesAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/precEqAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/precEqAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/solveNeutronicsAdjoint.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/adjointDiffusion/include/solveNeutronicsAdjoint.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/albedoSP3/albedoSP3FvPatchField.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/albedoSP3/albedoSP3FvPatchField.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/albedoSP3/albedoSP3FvPatchField.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/albedoSP3/albedoSP3FvPatchField.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/di/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/aitkenAcceleration.H:54: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/aitkenAcceleration.H:54: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/fluxEq.H:12: warning: include file calcScatteringSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/implicitPredictor.H:86: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H:48: warning: include file calcScatteringSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H:85: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H:48: warning: include file calcScatteringSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H:85: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/implicitPredictor.H:86: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/aitkenAcceleration.H:54: warning: include file initializeNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/fluxEq.H:12: warning: include file calcScatteringSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/solveNeutronics.H:74: warning: include file precEq.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/solveNeutronics.H:76: warning: include file initializeDelayedNeutroSource.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+ffusionNeutronics.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/diffusionNeutronics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/aitkenAcceleration.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/aitkenAcceleration.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/createFluxMatrices.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/createFluxMatrices.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/createNeutronicsFields.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/createNeutronicsFields.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/fluxEq.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/fluxEq.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/implicitPredictor.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/implicitPredictor.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/integralPredictor.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/normFluxes.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/normFluxes.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/solveNeutronics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/diffusion/include/solveNeutronics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/calcScatteringSource.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/calcScatteringSource.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultGetCouplingFieldRefs.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultGetCouplingFieldRefs.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultInterpolateCouplingFields.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/defaultInterpolateCouplingFields.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/initializeDelayedNeutroSource.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/initializeDelayedNeutroSource.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/initializeNeutroSource.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/initializeNeutroSource.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/precEq.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/precEq.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/setXSFields.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/include/setXSFields.H...
+Preprocessing /home/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C:1143: warning: include file computeFeedbackFieldValues.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C:1169: warning: include file correctReactivity.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C:1239: warning: include file solvePointKinetics.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C:1242: warning: include file solvePointKineticsLiquidFuel.H not found, perhaps you forgot to add its directory to INCLUDE_PATH?
+/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/neutronics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/computeFeedbackFieldValues.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/computeFeedbackFieldValues.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/correctReactivity.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/correctReactivity.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/pointKineticsInfo.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/pointKineticsInfo.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKinetics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKinetics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKineticsLiquidFuel.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/include/solvePointKineticsLiquidFuel.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/pointKinetics/pointKineticNeutronics.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/aitkenAccelerationEigenvalue.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/aitkenAccelerationEigenvalue.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcLegendreMatrices.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcLegendreMatrices.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcSourceSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcSourceSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcThisIntraSource.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/calcThisIntraSource.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/createFluxMatricesSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/createFluxMatricesSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/createNeutronicsFieldsSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/createNeutronicsFieldsSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/fluxEqSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/fluxEqSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/legendrePoly.C...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/legendrePoly.C...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/normFluxesSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/normFluxesSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/readQuadratureSet.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/readQuadratureSet.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/setXSFieldsSN.H...
+Parsing file /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/setXSFieldsSN.H...
+Preprocessing /home/carlo/data/GeN-Foam/GeN-Foam_ffn/GeN-Foam/GeN-Foam/classes/neutronics/SN/include/solveNeutronicsSN.H...
+Cleaning up...
+Exiting...

@@ -1,0 +1,144 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+tutorials="1D_boiling 1D_PSBT_SC 1D_MSR_pointKinetics 1D_thermalMSR_pointKinetics communityContributions/2D_MSFR_ULOF_diffusion_and_pk 1D_HX/onePhase 1D_HX/twoPhase 1D_CHF/imposedPower 1D_CHF/imposedTemperature 3D_SmallESFR 2D_FFTF 2D_MSFR 2D_cavityBoussinesq 2D_onePhaseAndPointKineticsCoupling 2D_voidMotionNoPhaseChange 2D_KNS37-L22 Godiva_SN" #Godiva_SN
+
+
+# run all tutorials and check for clean finish 
+for tutorialName in $tutorials
+do
+
+    case "$tutorialName" in
+    "3D_SmallESFR")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_boiling")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_PSBT_SC")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_MSR_pointKinetics")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_thermalMSR_pointKinetics")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_HX/onePhase")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_HX/twoPhase")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_CHF/imposedPower")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "1D_CHF/imposedTemperature")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "2D_MSFR")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "2D_FFTF")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;        
+    "2D_cavityBoussinesq")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "2D_onePhaseAndPointKineticsCoupling")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "2D_voidMotionNoPhaseChange")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;   
+    "2D_KNS37-L22")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "Godiva_SN")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;
+    "communityContributions/2D_MSFR_ULOF_diffusion_and_pk")
+        printf "Cleaning tutorial $tutorialName...\n"
+        cd $tutorialName
+        ./Allclean
+        cd ..
+        cd ..
+        printf "Done cleaning tutorial $tutorialName...\n"
+        ;;        
+    esac
+
+
+done
+
+
+# clean all
+
+#------------------------------------------------------------------------------

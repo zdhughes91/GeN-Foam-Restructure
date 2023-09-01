@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# --- Run from this directory
+cd ${0%/*} || exit 1
+
+# --- Initialize the output file
+resFile=test.out
+rm $resFile
+touch $resFile
+
+# --- Run the simulation
+echo -e "Run tutorial 2D_MSFR ...\n" | tee -a $resFile
+./Allrun >> log.simulation
+echo -e "Done running tutorial 2D_MSFR ...\n" | tee -a $resFile
+
+# --- Check it ran
+isConverge()
+{
+    folder=$1
+    name=$2
+    string=$(tail -3 ./$folder/log.GeN-Foam | grep End)
+    if [ "$string" = "End" ]; then
+        echo -e "$name has converged \n" | tee -a $resFile
+    else
+        echo -e "$name has NOT converged \n" | tee -a $resFile
+        exit 1
+    fi
+}
+
+isConverge steadyStateTH "Thernal-hydraulic steady state"
+isConverge steadyStateEN "Energy steady state"
+isConverge transient     "Transient"
+
+# --- Recover the results
+keff=$(foamDictionary ./steadyStateEN/165/uniform/reactorState -entry keff -value)
+totalPower=$(
+    awk '{ print $1+0 }' <<<$(
+        grep power ./transient/log.GeN-Foam |
+        tail -1 |
+        egrep -o "[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?."
+    )
+)
+
+expectedKeff=0.960283
+expectedTotalPower=20000000
+
+
+# --- Check that results are correct
+if  [ $expectedKeff = $keff ] &&
+    [ $expectedTotalPower = $totalPower ]
+then
+    echo "Perfect match:" | tee -a $resFile
+    echo "                 | Simulated | Expected" | tee -a $resFile
+    echo "     keff        | $keff | $expectedKeff" | tee -a $resFile
+    echo "     Total power | $totalPower | $expectedTotalPower " | tee -a $resFile
+else
+    echo "Divergent results:" | tee -a $resFile
+    echo "                 | Simulated | Expected" | tee -a $resFile
+    echo "     keff        | $keff | $expectedKeff" | tee -a $resFile
+    echo "     Total power | $totalPower | $expectedTotalPower " | tee -a $resFile
+    exit 1
+fi
+
+# --- Exit successfully
+exit 0

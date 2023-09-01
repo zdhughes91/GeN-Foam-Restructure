@@ -1,0 +1,121 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/fluidRegion";
+    object      phaseProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// ------------------------------------------------------------------------- //
+// --- THERMAL-HYDRAULIC TYPE ---------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+thermalHydraulicsType    "onePhase";
+
+// ------------------------------------------------------------------------- //
+// --- STRUCTURES PROPERTIES ----------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+structureProperties
+{
+    fuelElement
+    {
+        volumeFraction      0.696911;
+        Dh                  0.00254;
+
+        powerModel
+        {
+            type                nuclearFuelPin;
+            volumetricArea      477.305494; // 1/m
+            powerDensity        0; // Will be computed by the neutronic solver
+            fuelInnerRadius     0; // Useless in this case...
+            fuelOuterRadius     0.004715;
+            cladInnerRadius     0.004865;
+            cladOuterRadius     0.005365;
+            fuelMeshSize        16;
+            cladMeshSize        4;
+            fuelRho             10480;
+            cladRho             7500;
+            fuelCp              250;
+            cladCp              500;
+            fuelK               3;
+            cladK               20;
+            fuelT               700;
+            cladT               700;
+            gapH                3000;
+        }
+    }
+
+    centralUnloadedFuelElement
+    {
+        volumeFraction      0.773275;
+        Dh                  0.0095758;
+
+        passiveProperties
+        {
+            volumetricArea  94.707459;
+            rho             8190;
+            Cp              500;
+            T               83.3;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------- //
+// --- REGIME MAP MODEL ---------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+regimeMapModel
+{
+    type    none;
+}
+
+// ------------------------------------------------------------------------- //
+// --- REGIME PHYSICS FOR EACH REGIME -------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+physicsModels
+{
+    dragModels
+    {
+        "fuelElement:centralUnloadedFuelElement"
+        {
+            type    ReynoldsPower;
+            coeff   0.9; // 0.079; // 0.632; //
+            exp     -0.25;
+        }
+    }
+
+    heatTransferModels
+    {
+        "fuelElement:centralUnloadedFuelElement"
+        {
+            type    NusseltReynoldsPrandtlPower;
+            const   0;
+            coeff   0.023;
+            expRe   0.8;
+            expPr   0.4;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------- //
+// --- MISCELLANEA --------------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+
+pMin        1e4;
+
+pRefCell    0;
+
+pRefValue   1e5;
+
+// ************************************************************************* //

@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// General
+
+application         GeN-Foam;
+
+startFrom           startTime;
+
+startTime           0;
+
+stopAt              endTime;
+
+endTime             200;
+
+deltaT              1;// time step (if non adjusted)
+
+writeControl        runTime;//timeStep;//timeStep;//adjustableRunTime;
+
+writeInterval       200;
+
+purgeWrite          0;
+
+writeFormat         ascii;
+
+writePrecision      7;
+
+writeCompression    false;
+
+timeFormat          general;
+
+timePrecision       8;
+
+runTimeModifiable   true;
+
+removeBaffles       true;// this flag is not mandatory and allow to create 
+			 // a ghost thermal-hydraulics mesh without baffles.
+			 // This ghost mesh allows obtained better mesh-to-mesh 
+			 // projections between different physics.
+			 // may not worked in parallel - to be tested 
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Physics to solve
+
+solveFluidMechanics     true;
+
+solveEnergy             true;
+
+solveNeutronics         true;
+
+solveThermalMechanics   true;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Global simulation options
+
+liquidFuel  false; // to be set to true in case of MSRs
+
+// Time step control
+
+adjustTimeStep      false; // adjust the time step based on the parameters 
+			   // below (most stringent condition)
+
+maxDeltaT           1; // maximum time step
+
+maxCo               40; // maximum Courant number
+
+maxPowerVariation   0.025; // maximum power variation
+
+// ************************************************************************* //

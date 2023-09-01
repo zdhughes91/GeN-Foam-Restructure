@@ -1,0 +1,99 @@
+========================================
+
+Reading fluidRegion polyMesh
+
+MASS FLOW AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Total core flow rate = 18981.019761 kg/s
+
+
+ | Zones: innerCore outerCore
+ | Max of magU is 3.63557470105 m/s at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Min of magU is 3.60419418634 m/s at[2.33, 0.0, 5.859999999999999]m
+ | Avg of magU is 3.62043085195 m/s
+
+PRESSURE DROP AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Pressure drop = 55116.8869145 Pa
+
+
+========================================
+
+Reading fluidRegion polyMesh
+
+TEMPERATURE AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | In core
+ | Zones: innerCore outerCore
+ | Max of T is 860.0508 K at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Min of T is 689.4311 K at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Avg of T is 762.676649222 K
+
+ | In diagrid
+ | Zones: diagrid
+ | Max of T is 671.56 K at[2.7416665, 1.734723475976807e-18, 2.1083335]m
+ | Min of T is 665.8645 K at[0.13185186666666668, 0.0, 2.1083335]m
+ | Avg of T is 670.486007 K
+
+ | In upper plenum
+ | Zones: sodium
+ | Max of T is 852.6571 K at[1.89, -1.734723475976807e-18, 7.550000000000001]m
+ | Min of T is 663.072 K at[4.9464285, 0.0, 1.95]m
+ | Avg of T is 760.323694277 K
+
+FUEL TEMPERATURE AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Inner fuel
+ | Zones: innerCore outerCore
+ | Max of TinnerFuel is 2059.91 K at[1.89, -1.879283765641541e-18, 5.46]m
+ | Min of TinnerFuel is 1173.651 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TinnerFuel is 1584.75989654 K
+
+ | Average fuel
+ | Zones: innerCore outerCore
+ | Max of TavFuel is 1620.871 K at[1.89, -1.879283765641541e-18, 5.46]m
+ | Min of TavFuel is 1006.305 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TavFuel is 1300.85000915 K
+
+ | Outer fuel
+ | Zones: innerCore outerCore
+ | Max of TouterFuel is 1103.994 K at[1.89, -1.879283765641541e-18, 5.66]m
+ | Min of TouterFuel is 804.7854 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TouterFuel is 958.1690931 K
+
+CLAD TEMPERATURE AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Inner clad
+ | Zones: innerCore outerCore
+ | Max of TinnerClad is 890.6946 K at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Min of TinnerClad is 708.3672 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TinnerClad is 794.303494053 K
+
+ | Average clad
+ | Zones: innerCore outerCore
+ | Max of TavClad is 879.1671 K at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Min of TavClad is 701.2583 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TavClad is 782.221844751 K
+
+ | Outer clad
+ | Zones: innerCore outerCore
+ | Max of TouterClad is 868.3716 K at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Min of TouterClad is 694.6009 K at[2.33, 0.0, 5.0600000000000005]m
+ | Avg of TouterClad is 770.907359918 K
+
+RHOK AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of rhok is 855.023696 kg/m3 at[0.13185186666666668, 0.0, 5.0600000000000005]m
+ | Min of rhok is 815.405818 kg/m3 at[1.89, -1.879283765641541e-18, 5.859999999999999]m
+ | Avg of rhok is 838.016079841 kg/m3
+
+========================================
+Reading neutroRegion polyMesh
+
+VOLFUELPOWER AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of volFuelPowerNeutro is 696637600.0 W/m3 at[1.8271428570000001, 1.879283765641541e-18, 5.41]m
+ | Min of volFuelPowerNeutro is 196062300.0 W/m3 at[2.392857143, 1.734723475976807e-18, 5.91]m
+ | Avg of volFuelPowerNeutro is 446079570.417 W/m3
+
+NEUTRON FLUX AT TIME endTime_6s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of flux0 is 3.301296e+19 1/m2/s at[1.8271428570000001, 1.879283765641541e-18, 5.41]m
+ | Min of flux0 is 9.268138e+18 1/m2/s at[2.392857143, 1.734723475976807e-18, 5.91]m
+ | Avg of flux0 is 2.26654244669e+19 1/m2/s
+

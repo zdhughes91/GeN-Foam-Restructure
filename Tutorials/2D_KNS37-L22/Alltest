@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# --- Run from this directory
+cd ${0%/*} || exit 1
+
+# --- Initialize the output file
+resFile=test.out
+rm $resFile
+touch $resFile
+
+# --- Run the simulation
+echo -e "Run tutorial 2D_KNS37-L22 ...\n" | tee -a $resFile
+# ./Allrun >> log.simulation
+echo -e "Done running tutorial 2D_KNS37-L22 ...\n" | tee -a $resFile
+
+# --- Check it ran
+endString=$(tail -3 ./log.GeN-Foam | grep End)
+if [ "$endString" = "End" ]; then
+    echo -e "2D_KNS37-L22 has converged \n" | tee -a $resFile
+else
+    echo -e "2D_KNS37-L22 has NOT converged \n" | tee -a $resFile
+    exit 1
+fi
+
+# --- Recover the results
+input="./postProcessing/fluidRegion/averageValues/-2/volFieldValue.dat"
+average=$(head -10340 "$input" | tail -1 | xargs)
+averageTimeAt=$(echo $average | awk '{ print $1+0 }')
+averageAlphaVapourAt=$(echo $average | awk '{ print $2+0 }')
+averageTemperatureAt=$(echo $average | awk '{ print $3+0 }')
+
+expectedTimeAt="12.627289459004267"
+expectedAlphaVapourAt="0.2288705"
+expectedTemperatureAt="834.5974"
+
+
+# --- Check that results are correct
+isInRange()
+{
+    ref=$1
+    value=$2
+    error=$3
+    valueMin=$(bc -l <<<"$value*(1-$error)")
+    valueMax=$(bc -l <<<"$value*(1+$error)")
+    if (( $(echo "$valueMin <= $ref && $ref <= $valueMax" | bc -l) )); then
+        echo 0
+    elif (( $(echo "$valueMax <= $ref && $ref <= $valueMin" | bc -l) )); then
+        echo 0
+    else
+        echo 1
+    fi
+}
+
+error=0.01
+echo "Test with $error relative error" | tee -a $resFile
+if  [ $(isInRange $expectedTimeAt        $averageTimeAt        $error) -eq 0 ] &&
+    [ $(isInRange $expectedAlphaVapourAt $averageAlphaVapourAt $error) -eq 0 ] &&
+    [ $(isInRange $expectedTemperatureAt $averageTemperatureAt $error) -eq 0 ]
+then
+    echo "Perfect match:" | tee -a $resFile
+    echo "                       | Simulated | Expected" | tee -a $resFile
+    echo "     Time              | $averageTimeAt | $expectedTimeAt" | tee -a $resFile
+    echo "     alpha.vapour      | $averageAlphaVapourAt | $expectedAlphaVapourAt" | tee -a $resFile
+    echo "     T.activeStructure | $averageTemperatureAt | $expectedTemperatureAt" | tee -a $resFile
+else
+    echo "Divergent results:" | tee -a $resFile
+    echo "                       | Simulated | Expected" | tee -a $resFile
+    echo "     Time              | $averageTimeAt | $expectedTimeAt" | tee -a $resFile
+    echo "     alpha.vapour      | $averageAlphaVapourAt | $expectedAlphaVapourAt" | tee -a $resFile
+    echo "     T.activeStructure | $averageTemperatureAt | $expectedTemperatureAt" | tee -a $resFile
+    exit 1
+fi
+
+# --- Exit successfully
+exit 0

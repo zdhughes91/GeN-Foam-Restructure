@@ -1,0 +1,24 @@
+classes/common/timeProfile/timeProfile.C
+
+classes/neutronics/neutronics.C
+classes/neutronics/XS/XS/XS.C
+classes/neutronics/XS/XSLowMem/XSLowMem.C
+classes/neutronics/diffusion/diffusionNeutronics.C
+classes/neutronics/SP3/SP3Neutronics.C
+classes/neutronics/SN/include/legendrePoly.C
+classes/neutronics/SN/SNNeutronics.C
+classes/neutronics/adjointDiffusion/adjointDiffusionNeutronics.C
+classes/neutronics/albedoSP3/albedoSP3FvPatchField.C
+classes/neutronics/pointKinetics/pointKineticNeutronics.C
+
+classes/thermoMechanics/thermoMechanics.C
+classes/thermoMechanics/linearElastic/linearElasticThermoMechanics.C
+classes/thermoMechanics/tractionDisplacement/tractionDisplacementFvPatchVectorField.C
+
+classes/multiphysicsControl/multiphysicsControl.C
+
+include/mergeOrSplitBaffles.C
+
+main/GeN-Foam.C
+
+EXE = $(FOAM_USER_APPBIN)/GeN-Foam

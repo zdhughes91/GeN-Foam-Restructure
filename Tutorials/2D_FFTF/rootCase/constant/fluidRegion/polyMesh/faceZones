@@ -1,0 +1,356 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       regIOobject;
+    object      faceZones;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+32
+(
+coreInlet
+{
+    type faceZone;
+faceLabels      List<label> 
+13
+(
+1080
+1088
+1096
+1100
+3867
+3870
+3872
+3874
+3875
+3941
+3944
+3946
+3947
+)
+;
+flipMap         List<bool> 13{0};
+}
+
+coreMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 
+13
+(
+    835 843 851 855 6643 6653 6663 6668
+    6028 6038 6048 6058 6063
+);
+flipMap         List<bool> 13{0};
+}
+
+coreOutlet
+{
+    type faceZone;
+faceLabels      List<label> 
+13
+(
+    585 595 605 610 6898 6904 6910 6913
+    6357 6363 6369 6375 6378
+);
+flipMap         List<bool> 13{0};
+}
+
+IHXPrimaryMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 10(29818 29858 29898 29938 29978 30018 30058 30098 30138 30158);
+flipMap         List<bool> 10{0};
+}
+
+coreBaffle
+{
+    type faceZone;
+faceLabels      List<label> 0();
+flipMap         List<bool> 0();
+}
+
+GEMMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 2(26417 26422);
+flipMap         List<bool> 2{0};
+}
+
+innerCoreOutlet
+{
+    type faceZone;
+faceLabels      List<label> 8(585 595 605 610 6898 6904 6910 6913);
+flipMap         List<bool> 8{0};
+}
+
+outerCoreMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 5(6028 6038 6048 6058 6063);
+flipMap         List<bool> 5{0};
+}
+
+pumpMiddleCutPrimary
+{
+    type faceZone;
+faceLabels      List<label> 10(31081 31083 31085 31087 31089 31091 31093 31095 31097 31098);
+flipMap         List<bool> 10{0};
+}
+
+shieldMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 6(4170 4178 4185 4558 4568 4573);
+flipMap         List<bool> 6{0};
+}
+
+reflectorMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 7(5087 5098 5108 5118 5123 5623 5628);
+flipMap         List<bool> 7{0};
+}
+
+bypassMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 
+40
+(
+20475
+20478
+20481
+20484
+20487
+20490
+20493
+20496
+20499
+20502
+20505
+20508
+20511
+20514
+20517
+20520
+20523
+20526
+20529
+20532
+20535
+20538
+20541
+20544
+20547
+20550
+20553
+20556
+20559
+20562
+20565
+20568
+20571
+20574
+20577
+20580
+20583
+20586
+20589
+20591
+)
+;
+flipMap         List<bool> 40{0};
+}
+
+pumpMiddleCutSecondary
+{
+    type faceZone;
+faceLabels      List<label> 10(34618 34678 34738 34798 34858 34918 34978 35038 35098 35128);
+flipMap         List<bool> 10{0};
+}
+
+outerCoreOutlet
+{
+    type faceZone;
+faceLabels      List<label> 5(6357 6363 6369 6375 6378);
+flipMap         List<bool> 5{0};
+}
+
+innerCoreMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 8(835 843 851 855 6643 6653 6663 6668);
+flipMap         List<bool> 8{0};
+}
+
+bypassBaffle
+{
+    type faceZone;
+faceLabels      List<label> 0();
+flipMap         List<bool> 0();
+}
+
+CRMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 4(26642 26647 27451 27456);
+flipMap         List<bool> 4{0};
+}
+
+baffle1
+{
+    type faceZone;
+faceLabels      List<label> 0();
+flipMap         List<bool> 0();
+}
+
+baffle2
+{
+    type faceZone;
+faceLabels      List<label> 0();
+flipMap         List<bool> 0();
+}
+
+hotLegMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 10(27918 28038 28158 28278 28398 28518 28638 28758 28878 28975);
+flipMap         List<bool> 10{0};
+}
+
+coldLegMiddleCut
+{
+    type faceZone;
+faceLabels      List<label> 4(29525 29527 29529 29530);
+flipMap         List<bool> 4{0};
+}
+
+vesselInlet
+{
+    type faceZone;
+faceLabels      List<label> 4(24149 24268 24348 24427);
+flipMap         List<bool> 4{0};
+}
+
+vesselOutlet
+{
+    type faceZone;
+faceLabels      List<label> 10(15054 15173 15253 15333 15413 15493 15573 15653 15733 15812);
+flipMap         List<bool> 10{0};
+}
+
+primaryIHXOutlet
+{
+    type faceZone;
+faceLabels      List<label> 10(27802 27805 27808 27811 27814 27817 27820 27823 27826 27828);
+flipMap         List<bool> 10{0};
+}
+
+secondaryIHXOutlet
+{
+    type faceZone;
+faceLabels      List<label> 10(32088 32128 32168 32208 32248 32288 32328 32368 32408 32428);
+flipMap         List<bool> 10{0};
+}
+
+secondaryIHXInlet
+{
+    type faceZone;
+faceLabels      List<label> 10(31661 31702 31743 31784 31825 31866 31907 31948 31989 32029);
+flipMap         List<bool> 10{0};
+}
+
+secondaryColdLeg
+{
+    type faceZone;
+faceLabels      List<label> 10(34266 34268 34270 34272 34274 34276 34278 34280 34282 34283);
+flipMap         List<bool> 10{0};
+}
+
+primaryIHXInlet
+{
+    type faceZone;
+faceLabels      List<label> 10(29269 29271 29273 29275 29277 29279 29281 29283 29285 29286);
+flipMap         List<bool> 10{0};
+}
+
+primaryIHXInlet2
+{
+    type faceZone;
+faceLabels      List<label> 10(31147 31206 31265 31324 31383 31442 31501 31560 31619 31654);
+flipMap         List<bool> 10{0};
+}
+
+baffleNozzleBypass
+{
+    type faceZone;
+faceLabels      List<label> 0();
+flipMap         List<bool> 0();
+}
+
+baffleFaces
+{
+    type faceZone;
+faceLabels      List<label> 
+16
+(
+75319
+75320
+75321
+75322
+75323
+75324
+75325
+75326
+75327
+75328
+75329
+75330
+75331
+75332
+75333
+75334
+)
+;
+flipMap         List<bool> 
+16
+(
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+)
+;
+}
+
+vesselValve
+{
+    type faceZone;
+faceLabels      List<label> 5(75335 75336 75337 75338 75339);
+flipMap         List<bool> 5{0};
+}
+)
+
+// ************************************************************************* //

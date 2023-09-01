@@ -1,0 +1,11 @@
+2D_MSFR_ULOF_diffusion_and_pk is a 2-D r-z model of a Molten Salt Fast Reactor. It solves for
+neutronics and thermal-hydraulics.
+
+The case is the same as 2D_MSFR, excpet that:
+- a coupled fluid and energy simulation is run to ensure a better coupling
+  betwee energy and velocity
+- a loss-of-flow transient is run by using both diffusion and point kinetics
+
+The tutorial has been prepared by Arnaldo Mattioli (Politecnico di Milano) and 
+revised by C. Fiorina (EPFL).
+

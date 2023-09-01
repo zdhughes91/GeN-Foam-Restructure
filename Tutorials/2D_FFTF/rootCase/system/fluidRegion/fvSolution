@@ -1,0 +1,102 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+solvers
+{
+    p_rgh
+    {
+        solver          GAMG;
+        smoother        DIC;
+        tolerance       1e-07;
+        relTol          0.001;
+    }
+    p_rghFinal
+    {
+        solver          GAMG;
+        smoother        DIC;
+        tolerance       1e-07;
+        relTol          0;
+    }
+    "(h|k|epsilon)"
+    {
+        solver          PBiCG;
+        preconditioner  DILU;
+        tolerance       1e-07;
+        relTol          0.001;
+    }
+    "(h|k|epsilon)Final"
+    {
+        solver          PBiCG;
+        preconditioner  DILU;
+        tolerance       1e-07;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nCorrectors     6;
+    nNonOrthogonalCorrectors 0;
+    correctUntilConvergence true;
+    momentumMode    cellCenteredFaceReconstruction;
+    porousInterfaceSharpness 0.5;
+
+    //- This limits the minimum magnitude of U that can be used in the 
+    //  calculation of the drag factor. Defaults to 0. Only (possibly)
+    //  useful in certain two-phase scenarios
+    minMagU 	1e-2;
+
+    residualControl
+    {
+        p_rgh
+        {
+            tolerance       1e-06;
+            relTol          0;
+            useFirstPISOInitialResidual true;
+        }
+        h
+        {
+            tolerance       1e-06;
+            relTol          0.01;
+        }
+        k
+        {
+            tolerance       0.0001;
+            relTol          0;
+        }
+    }
+}
+
+relaxationFactors
+{
+    equations
+    {
+        h               0.5;
+        hFinal          0.5;
+
+        U               0.5;
+        UFinal          0.5;
+        p_rgh           0.5;
+        p_rghFinal      0.5;
+
+        "epsilon.*"     0.6;
+        "k.*"           0.6;
+    }
+    fields
+    {
+    }
+}
+
+// ************************************************************************* //

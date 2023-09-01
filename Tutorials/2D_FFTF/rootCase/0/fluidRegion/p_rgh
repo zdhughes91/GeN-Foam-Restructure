@@ -1,0 +1,116 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 100000;
+
+boundaryField
+{
+    vesselWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    vesselFront
+    {
+        type            wedge;
+    }
+    vesselBack
+    {
+        type            wedge;
+    }
+    outVesselFrontAndBack
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    outVesselWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    secLoopFrontAndBack
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    hotLegSecondaryOutlet
+    {
+        type            fixedValue;
+        value           uniform 100000;
+    }
+    coldLegSecondaryInlet
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    secLoopWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle1_master
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle1_slave
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle2_master
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle2_slave
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle3
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    baffle4
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 100000;
+    }
+    vesselValve
+    {
+        type            fixedValue;
+        value           uniform 100000;
+    }
+}
+
+// ************************************************************************* //

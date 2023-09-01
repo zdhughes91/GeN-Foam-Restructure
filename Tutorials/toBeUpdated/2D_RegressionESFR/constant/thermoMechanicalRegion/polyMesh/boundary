@@ -1,0 +1,64 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    topWall
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          24;
+        startFace       2138;
+    }
+    wedgeY+
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          1104;
+        startFace       2162;
+    }
+    wedgeY-
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          1104;
+        startFace       3266;
+    }
+    walls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       4370;
+    }
+    bottomWall
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          24;
+        startFace       4416;
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       4440;
+    }
+)
+
+// ************************************************************************* //

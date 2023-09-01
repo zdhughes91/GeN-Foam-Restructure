@@ -1,0 +1,122 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+exe="GeN-Foam"
+
+endTimeSS_N=100
+endTimeSS=900
+endTimeT=1800
+
+cases="steadyStateN steadyStateEN transient"
+
+runCloneCase()
+{
+    printf "Cloning $2 to case $1\n"
+    cp -r $2 $1
+    printf "$2 cloned!\n"
+}
+
+setSteadyStateN()
+{
+    runCloneCase $1 $2
+
+    printf "Setting steady state case\n"
+
+    foamDictionary $1/system/controlDict -entry startFrom -set startTime
+    foamDictionary $1/system/controlDict -entry startTime -set 0
+    foamDictionary $1/system/controlDict -entry endTime -set $endTimeSS_N
+    foamDictionary $1/system/controlDict -entry adjustTimeStep -set false
+    foamDictionary $1/system/controlDict -entry deltaT -set 0.5
+    foamDictionary $1/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary $1/system/controlDict -entry writeInterval -set $endTimeSS_N
+    foamDictionary $1/system/controlDict -entry solveFluidMechanics -set false
+    foamDictionary $1/system/controlDict -entry solveEnergy -set false
+    foamDictionary $1/system/controlDict -entry solveNeutronics -set true
+    foamDictionary $1/constant/neutroRegion/neutronicsProperties -entry model -set diffusionNeutronics
+    foamDictionary $1/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set true
+    foamDictionary $1/system/controlDict -entry maxCo -set 500;
+    foamDictionary $1/system/controlDict -entry maxDeltaT -set 2;
+    printf "Case set!\n\n"
+}
+
+setSteadyStateEN()
+{
+    runCloneCase $1 $2
+
+    printf "Setting steady state case\n"
+
+    foamDictionary $1/system/controlDict -entry startFrom -set startTime
+    foamDictionary $1/system/controlDict -entry startTime -set $endTimeSS_N
+    foamDictionary $1/system/controlDict -entry endTime -set $endTimeSS
+    foamDictionary $1/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary $1/system/controlDict -entry writeInterval -set {$endTimeSS-$endTimeSS_N}
+    foamDictionary $1/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary $1/system/controlDict -entry solveEnergy -set true
+    foamDictionary $1/system/controlDict -entry solveNeutronics -set false
+    foamDictionary $1/system/controlDict -entry maxCo -set 500;
+    foamDictionary $1/system/controlDict -entry maxDeltaT -set 2;
+    foamDictionary $1/system/controlDict -entry adjustTimeStep -set true
+    printf "Case set!\n\n"
+}
+
+setTransient()
+{
+    runCloneCase $1 $2
+
+    printf "Setting transient case\n"
+    
+    foamDictionary $1/system/controlDict -entry startFrom -set startTime
+    foamDictionary $1/system/controlDict -entry startTime -set $endTimeSS
+    foamDictionary $1/system/controlDict -entry endTime -set $endTimeT
+    foamDictionary $1/system/controlDict -entry writeControl -set timeStep
+    foamDictionary $1/system/controlDict -entry writeInterval -set 50
+    foamDictionary $1/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary $1/system/controlDict -entry solveEnergy -set true
+    foamDictionary $1/system/controlDict -entry solveNeutronics -set true
+    foamDictionary $1/system/controlDict -entry maxCo -set 2.5;
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.h -set 0.95
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.hFinal -set 1.0
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.U -set 1.0
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.UFinal -set 1.0
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.p_rgh -set 1.0
+    foamDictionary $1/system/fluidRegion/fvSolution -entry relaxationFactors.equations.p_rghFinal -set 1.0
+    foamDictionary $1/system/controlDict -entry maxDeltaT -set 1;
+    foamDictionary $1/constant/neutroRegion/neutronicsProperties -entry model -set pointKinetics
+    foamDictionary $1/constant/neutroRegion/neutronicsProperties -entry eigenvalueNeutronics -set false    
+    printf "Case set!\n\n"
+}
+
+for caseName in $cases
+do
+    printf "Preparing to run case $caseName\n"
+
+    case "$caseName" in
+    "steadyStateN")
+        setSteadyStateN $caseName rootCase
+        ;;
+    "steadyStateEN")
+        setSteadyStateEN $caseName steadyStateN
+        ;;
+    "transient")
+        setTransient $caseName steadyStateEN
+        ;;
+    esac
+
+    # Start gnuplot if it exist
+    if command -v gnuplot &> /dev/null
+    then
+        gnuplot -e "log='$caseName/log.$exe'" residuals - &> /dev/null &
+    else
+        echo "gnuplot could not be found"
+    fi
+
+    printf "Running $exe on $caseName\n"
+    $exe -case $caseName | tee "$caseName/log.GeN-Foam"
+
+    # Kill gnuplot if it was started
+    pkill -x gnuplot &> /dev/null
+
+done

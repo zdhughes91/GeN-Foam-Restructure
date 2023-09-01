@@ -1,0 +1,79 @@
+###############################################################################
+
+General Info
+
+This regression tests consists in the simulation of 9 different cases, labelled
+from 0 to 8, that test the coupling among the different physics of GeN-Foam. T-
+he cases are specified in the runDict file, which should not be altered. The g-
+eometry is a 2-D (x-z) wedge of a simplified coarse-mesh ESFR core. The physics
+involved in the simulations are the following :
+
+0 - fluid mechanics only, with a prescribed momentum source in the pump;
+1 - energy (i.e. temperature equation) only, solved over the velocity field ob-
+    tained in case 0 and with a prescribed volumetric power source in the core;
+2 - eigenvalue neutronics only, solved over the constant reference temperature 
+	field of case 0;
+3 - thermal mechanics only, solved over the temperature field obtained in case 
+	1;
+4 - coupled fluid mechanics and energy solved over the initial reference field-
+	s of case 0 and with a prescribed volumetric power source in the core and
+	momentum source in the pump. Please note that buoyancy is modelled via a B-
+	oussinesq approximation (i.e. with the rhok factor);
+5 - coupled eigenvalue neutronics and energy solved over the velocity field ob-
+	tained in case 4;
+6 - coupled fluid mechanics, energy and eigenvalue neutronics solved over the
+	initial reference fields of case 0, with a prescribed momentum source in t-
+	he pump;
+7 - coupled eigenvalue neutronics, energy and thermal mechanics solved over th-
+	e velocity field obtained in case 6;
+8 - coupled fluid mechanics, energy, eigenvalue neutronics, thermal mechanics
+	solved over the initial reference field of case 0, with a prescribed momen-
+	tum source in the pump.
+
+This test is based on a work performed in the field of ESFR benchmarks. More
+info can be found in the theory document.
+
+###############################################################################
+
+Info on the Script
+
+The test relies on a python script that runs all the cases. The script performs
+many tasks ranging from folder managment, file editing, application running, a-
+nd is capable of running the code in parallel. The rationale for the simulation
+of the i-th case is the following :
+
+- remove all pre-existing processor directories
+- if the case is to be solved over fields obtained by the case j, copy the con-
+  tent of the end time folder ("endTime_j") of case j to "0";
+- backup the "0" folder to "startTime_i" (which will be the same as "endTime_j"
+  if case i starts from case j. This extra redundancy was intended);
+- decompose the domain if parallelization is requested and save the log to 
+  "decomposeParLog_regionName_i";
+- run the case and save the log to "solverNameLog_i". Keep in mind that the log 
+  is NOT shown duing execution!;
+- rename the end time folder to "endTime_i"
+- post-process the results and save them to "postProcess_i";
+- repeat the whole thing for case i+1
+
+The script ("run.py") relies on several other scripts located in the "dependen-
+cies" folder.
+
+###############################################################################
+
+How to
+
+The Python version that is required to run the script is 2.7.12 or higher. It 
+might work with lower versions, but it has not been tested for those. Nonethel-
+ess, the majority of Linux systems should come with a preinstalled 2.7.12 pyth-
+on version.
+
+The scripts can be run either by issuing the command "python Allrun.py" or by 
+running the batch script "./Allrun.sh". If the case is to be reset, this can b-
+e done either via the "python Allclean.py" command, or by running the batch fi-
+le "./Allclean.sh". The solver name is to be specified in the runDict file, un-
+der the "name" option in "# Solver name". The parallelization options can be s-
+pecified in the runDict file in "# Parallel". Keep in mind that due to the 2-D 
+X-Z geometry, a decomposition along the Y axis is not possible.
+
+A set of reference results for all of the 9 cases in provided in the "referenc-
+eResults" folder. These have been obtained by a parallel run on 16 cores.

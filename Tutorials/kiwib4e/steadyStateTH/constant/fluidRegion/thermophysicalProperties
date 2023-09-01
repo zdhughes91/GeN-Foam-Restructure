@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/fluidRegion";
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            heRhoThermo;    // General thermophysical model calculation
+                                    // based on enthalpy h or internal energy e,
+                                    // and density rho
+    mixture         pureMixture;
+    transport       polynomial;
+    thermo          hPolynomial;
+    equationOfState PengRobinsonGas;
+    specie          specie;         // Thermophysical properties of species,
+                                    // derived from Cp, h and/or s
+    energy          sensibleEnthalpy;
+}
+
+// Hydrogen values at 600K and 3.7 MPa pressure from NIST.
+// At this temperature and pressure, the hydrogen is supercritical.
+// https://webbook.nist.gov/cgi/fluid.cgi?P=3.7&TLow=80&THigh=1000&TInc=10&Digits=5&ID=C1333740&Action=Load&Type=IsoBar&TUnit=K&PUnit=MPa&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+
+pRef        3.7e6; // Pa
+
+mixture
+{
+    specie
+    {
+        nMoles      1;
+        molWeight   2.016; // g/mol
+    }
+    equationOfState
+    {
+        Tc      33.145; // K, Critical temperature
+        Vc      ${{1.0/(31.262/2.016)}}; // m3/kmol, Critical volume
+        Pc      1.2964e6; // Pa, Critical pressure
+
+        omega   -0.219; // Acentric factor
+
+        rhoCoeffs<8> (
+            2.98268929e+02  -1.31815938e+00 2.81092249e-03  -3.26269179e-06
+            2.16673749e-09  -8.20663892e-13 1.64676554e-16  -1.35696602e-20
+        );
+    }
+    thermodynamics
+    {
+        CpCoeffs<8> (
+            1.266445630e+04 1.17094171e+01 -2.98179826e-02 3.81902598e-05
+            -2.54178633e-08 9.28566400e-12 -1.77480852e-15 1.39051574e-19
+        );
+
+        Hf          58214; // J/kg (heat of fusion) // enthalpy = 3958.3e3;
+
+        Sf          53.519e3; // J/kg/K (entropy)
+
+        Tref        600; // K
+    }
+    transport
+    {
+        muCoeffs<8>     (8.9385e-6 0 0 0 0 0 0 0);
+
+        kappaCoeffs<8>  (0.01238494 0.00057219 0 0 0 0 0 0);
+
+        Pr              0.701; // https://lambdageeks.com/prandtl-number/
+    }
+}
+
+// ************************************************************************* //

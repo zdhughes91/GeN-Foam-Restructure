@@ -1,0 +1,39 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      esfr_core__res;
+}
+//
+
+// In case one wants to move control rods, you should here define the control rods you want to move.
+// CRs must be aligned with z axis.
+// the control rod (or multiple control rods) must be a cellZone, and the follower (or multiple) 
+// followers) must be another cellZone.
+// It is possible to create and move multiple (blocks of) control rods by creating multiple 
+// control rod - follower couples. 
+// Of course, as always, there is no need for the cellZones for control rods and followers
+// to have any specific names. They will be "become" control rods by including them in this
+// dictionary
+
+zones 
+ ( 
+controlRod
+{
+ startTime 1001;
+ endTime  1003;
+ speed	0; // positive entering the core
+ initialDistanceFromMeshCR 0.0; // distance from the position defined in the mesh (postive towards the core) 
+ followerName	follower; // name of the cellZone representing the follower
+} 
+
+ ); 

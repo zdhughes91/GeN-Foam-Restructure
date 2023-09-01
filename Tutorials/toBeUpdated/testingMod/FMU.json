@@ -1,0 +1,12 @@
+{
+    "mapping": [["momentumSourceCoupled","model.root.system1.momentumModelica"],
+                ["temperatureCoupled","model.root.system1.temperatureModelica"],
+                ["HCoupled","model.root.system1.HModelica"],
+                ["powerDensitySensor","model.root.system1.power"],
+                ["hxPowerOut","model.root.system1.hxPower"]],
+    "from_OF":  {"powerDensitySensor":"REAL",
+                 "hxPowerOut":"REAL"},
+    "to_OF":   {"momentumSourceCoupled":"REAL",
+                "temperatureCoupled":"REAL",
+                "HCoupled":"REAL"}
+}

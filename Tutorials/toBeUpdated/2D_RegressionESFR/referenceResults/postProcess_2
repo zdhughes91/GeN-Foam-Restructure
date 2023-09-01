@@ -1,0 +1,15 @@
+========================================
+Reading neutroRegion polyMesh
+
+VOLFUELPOWER AT TIME endTime_2s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of volFuelPowerNeutro is 697041000.0 W/m3 at[1.8271428570000001, 1.879283765641541e-18, 5.41]m
+ | Min of volFuelPowerNeutro is 193304900.0 W/m3 at[2.392857143, 1.734723475976807e-18, 5.01]m
+ | Avg of volFuelPowerNeutro is 446012534.308 W/m3
+
+NEUTRON FLUX AT TIME endTime_2s IN ZONES : innerCore outerCore
+ | Zones: innerCore outerCore
+ | Max of flux0 is 3.281783e+19 1/m2/s at[1.8271428570000001, 1.879283765641541e-18, 5.41]m
+ | Min of flux0 is 9.101113e+18 1/m2/s at[2.392857143, 1.734723475976807e-18, 5.01]m
+ | Avg of flux0 is 2.25425077107e+19 1/m2/s
+

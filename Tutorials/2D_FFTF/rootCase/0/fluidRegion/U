@@ -1,0 +1,91 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|       ______          _   __           ______                               |
+|      / ____/  ___    / | / /          / ____/  ____   ____ _   ____ ___     |
+|     / / __   / _ \  /  |/ /  ______  / /_     / __ \ / __ `/  / __ `__ \    |
+|    / /_/ /  /  __/ / /|  /  /_____/ / __/    / /_/ // /_/ /  / / / / / /    |
+|    \____/   \___/ /_/ |_/          /_/       \____/ \__,_/  /_/ /_/ /_/     |
+|    Copyright (C) 2015 - 2022 EPFL                                           |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0.01);
+
+boundaryField
+{
+    vesselWall
+    {
+        type            noSlip;
+    }
+    vesselFront
+    {
+        type            wedge;
+    }
+    vesselBack
+    {
+        type            wedge;
+    }
+    outVesselFrontAndBack
+    {
+        type            slip;
+    }
+    outVesselWall
+    {
+        type            slip;
+    }
+    secLoopFrontAndBack
+    {
+        type            slip;
+    }
+    hotLegSecondaryOutlet
+    {
+        type            zeroGradient;
+    }
+    coldLegSecondaryInlet
+    {
+        type            fixedValue;
+        value           uniform (-0.2279059 0 0);
+    }
+    secLoopWall
+    {
+        type            slip;
+    }
+    baffle1_master
+    {
+        type            slip;
+    }
+    baffle1_slave
+    {
+        type            slip;
+    }
+    baffle2_master
+    {
+        type            slip;
+    }
+    baffle2_slave
+    {
+        type            slip;
+    }
+    baffle3
+    {
+        type            slip;
+    }
+    baffle4
+    {
+        type            slip;
+    }
+    vesselValve
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

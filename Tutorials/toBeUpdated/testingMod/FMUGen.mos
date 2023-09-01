@@ -1,0 +1,3 @@
+loadModel(Modelica);
+loadFile("./momentumSourceTest.mo");
+translateModelFMU(momentumSourceTest, version="2.0",fmuType="cs")

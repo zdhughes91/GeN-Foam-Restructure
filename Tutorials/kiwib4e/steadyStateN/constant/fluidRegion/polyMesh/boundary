@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       polyBoundaryMesh;
+    location    "constant/fluidRegion/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+7
+(
+    outletCentralUnloaded
+    {
+        type            patch;
+        nFaces          2;
+        startFace       661;
+    }
+    inletCentralUnloaded
+    {
+        type            patch;
+        nFaces          2;
+        startFace       663;
+    }
+    outletFuelElement
+    {
+        type            patch;
+        nFaces          12;
+        startFace       665;
+    }
+    inletFuelElement
+    {
+        type            patch;
+        nFaces          12;
+        startFace       677;
+    }
+    defaultFaces
+    {
+        type            patch;
+        nFaces          450;
+        startFace       689;
+    }
+    baffle_master
+    {
+        type            mappedWall;
+        inGroups        3(wall mappedPatch baffleFaces);
+        nFaces          150;
+        startFace       1139;
+        sampleMode      nearestPatchFace;
+        sampleRegion    fluid;
+        samplePatch     baffle_slave;
+    }
+    baffle_slave
+    {
+        type            mappedWall;
+        inGroups        3(wall mappedPatch baffleFaces);
+        nFaces          150;
+        startFace       1289;
+        sampleMode      nearestPatchFace;
+        sampleRegion    fluid;
+        samplePatch     baffle_master;
+    }
+)
+
+// ************************************************************************* //

@@ -1,0 +1,113 @@
+#!/bin/sh
+# Tutorial prepared based on the PhD work of Peter German (Texas A&M, peter.german@tamu.edu)
+
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+exe="GeN-Foam"
+
+cases="steadyState  transient  transientEnd "
+
+runCloneCase()
+{
+    printf "Cloning $2 to case $1..."
+    cp -r $2 $1
+    printf "$2 cloned!\n"
+}
+
+setSteadyState()
+{
+    runCloneCase $1 $2
+    printf "Setting steady state case...\n"
+    setFields -region neutroRegion
+    setFields -region fluidRegion
+    foamDictionary steadyState/system/fvSolution -entry tightlyCoupled -set false
+    foamDictionary steadyState/system/controlDict -entry startFrom -set startTime
+    foamDictionary steadyState/system/controlDict -entry startTime -set 0
+    foamDictionary steadyState/system/controlDict -entry endTime -set 100
+    foamDictionary steadyState/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary steadyState/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary steadyState/system/controlDict -entry writeInterval -set 100
+    foamDictionary steadyState/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary steadyState/system/controlDict -entry solveEnergy -set true
+    foamDictionary steadyState/system/controlDict -entry solveNeutronics -set false
+    foamDictionary steadyState/system/controlDict -entry solveThermalMechanics -set false
+    printf "Case set!\n\n"
+}
+
+
+setTransient()
+{
+    runCloneCase $1 $2
+    printf "Setting transient case...\n"
+    foamDictionary transient/system/fvSolution -entry tightlyCoupled -set true
+    foamDictionary transient/system/controlDict -entry startFrom -set startTime
+    foamDictionary transient/system/controlDict -entry startTime -set 100
+    foamDictionary transient/system/controlDict -entry endTime -set 400
+    foamDictionary transient/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary transient/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary transient/system/controlDict -entry writeInterval -set 10
+    foamDictionary transient/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary transient/system/controlDict -entry solveEnergy -set true
+    foamDictionary transient/system/controlDict -entry solveNeutronics -set true
+    foamDictionary transient/system/controlDict -entry solveThermalMechanics -set false
+    printf "Case set!\n\n"
+}
+
+setTransientEnd()
+{
+    runCloneCase $1 $2
+    printf "Setting transient case...\n"
+    foamDictionary transientEnd/system/fvSolution -entry tightlyCoupled -set true
+    foamDictionary transientEnd/system/controlDict -entry startFrom -set startTime
+    foamDictionary transientEnd/system/controlDict -entry startTime -set 400
+    foamDictionary transientEnd/system/controlDict -entry endTime -set 401
+    foamDictionary transientEnd/system/controlDict -entry adjustTimeStep -set true
+    foamDictionary transientEnd/system/controlDict -entry writeControl -set adjustableRunTime
+    foamDictionary transientEnd/system/controlDict -entry writeInterval -set 1
+    foamDictionary transientEnd/system/controlDict -entry solveFluidMechanics -set true
+    foamDictionary transientEnd/system/controlDict -entry solveEnergy -set true
+    foamDictionary transientEnd/system/controlDict -entry solveNeutronics -set true
+    foamDictionary transientEnd/system/controlDict -entry solveThermalMechanics -set false
+    printf "Case set!\n\n"
+}
+
+for caseName in $cases
+do
+    printf "Preparing to run case $caseName...\n"
+
+    case "$caseName" in
+    "steadyState")
+        setSteadyState $caseName rootCase
+        printf "Steady state th case is prepared!\n"
+        ;;
+    "transient")
+        printf "Transient case entered...\n"
+        setTransient $caseName steadyState
+        ;;
+    "transientEnd")
+        printf "Transient case entered...\n"
+        setTransientEnd $caseName transient
+        ;;
+    esac
+
+    # Start gnuplot if it exist
+    if command -v gnuplot &> /dev/null
+    then
+        gnuplot -e "log='$caseName/log.$exe'" residuals - &> /dev/null &
+    else
+        echo "gnuplot could not be found"
+    fi
+
+    #( cd $caseName && runApplication `getApplication` )
+    printf "Running $exe on $caseName\n"
+    $exe -case $caseName 2>&1 | tee "$caseName/log.$exe"
+
+    # Kill gnuplot if it was started
+    pkill -x gnuplot &> /dev/null
+
+done
+
+#------------------------------------------------------------------------------
